@@ -1,0 +1,904 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://schema.edu.ee/oppekava/"
+     xml:base="https://schema.edu.ee/oppekava/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="https://schema.edu.ee/oppekava/">
+    <owl:Ontology rdf:about="https://schema.edu.ee/oppekava/">
+        <owl:versionIRI rdf:resource="https://schema.edu.ee/oppekava/0.1/"/>
+        <rdfs:comment xml:lang="et">Õppekava(de) ontoloogia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Ontology for national curriculum and related curricula.</rdfs:comment>
+		<owl:imports rdf:resource="https://schema.edu.ee/opivaljund/"/>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppekava/ainevaldkondKoosneb">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/oppekava/Ainevaldkond"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/oppekava/Oppeaine"/>
+        <rdfs:label xml:lang="et">Ainevaldkond sisaldab õppeainet</rdfs:label>
+        <rdfs:label xml:lang="en">Includes subject</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppekava/ainevaldkonnaEesmark">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/oppekava/Ainevaldkond"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/oppekava/Eesmark"/>
+        <rdfs:label xml:lang="et">Ainevaldkonna eesmärk</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppekava/ainevaldkonnaOpivaljund">
+        <owl:inverseOf rdf:resource="https://schema.edu.ee/oppekava/opivaljundiAinevaldkond"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/oppekava/Eesmark"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
+        <rdfs:label xml:lang="et">Ainevaldkonna õpiväljund</rdfs:label>
+        <rdfs:label xml:lang="en">Related learning outcome</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppekava/alateema">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/oppekava/Teema"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/oppekava/Teema"/>
+        <rdfs:comment xml:lang="et">Teema alamosa, a&apos;la &quot;Tasandilised kujundid&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="et">Alateema</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppekava/opivaljundiAinevaldkond">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/oppekava/Eesmark"/>
+        <rdfs:label xml:lang="et">Õpiväljundi ainevaldkond</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.edu.ee/oppekava/eesmargiSonastus">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/oppekava/Eesmark"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="et">Eesmärgi sõnastus</rdfs:label>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="https://schema.edu.ee/oppekava/haridusAste">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/oppekava/Eesmark"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="et">Hariduse omandamise järjestikune osa, selle iga (järgnev) osa (nt põhiharidus, keskharidus, kõrgharidus).</rdfs:comment>
+        <rdfs:label xml:lang="et">Haridusaste</rdfs:label>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="https://schema.edu.ee/oppekava/kooliaste">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="et">Hariduse omandamise järjestikune alajaotus, selle iga (järgnev) osa.
+
+Kooliastmed on:
+1) I kooliaste – 1.–3. klass;
+2) II kooliaste – 4.–6. klass;
+3) III kooliaste – 7.–9. klass;
+4) gümnaasium – 10.–12. klass.
+
+Põhikooli kooliastmed on:
+1) I kooliaste – 1.–3. klass;
+2) II kooliaste – 4.–6. klass;
+3) III kooliaste – 7.–9. klass.</rdfs:comment>
+        <rdfs:label xml:lang="et">Kooliaste</rdfs:label>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="https://schema.edu.ee/oppekava/vanuseaste">
+        <rdfs:label xml:lang="et">Vanuseaste</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/Ainekava">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/oppekava/Oppekava"/>
+        <rdfs:comment xml:lang="et">Dokument, mis hõlmab ühe aine õppe-eesmärgid, õppesisu, metoodika ja hindamise põhimõtted.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ainekava</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/Ainevaldkond">
+        <owl:disjointWith rdf:resource="https://schema.edu.ee/oppekava/Eesmark"/>
+        <owl:disjointWith rdf:resource="https://schema.edu.ee/oppekava/Oppeaine"/>
+        <rdfs:comment xml:lang="et">Lähedase eesmärgiseade ja õppesisuga õppeained moodustavad ainevaldkonna. Ainevaldkonnad on järgmised:
+  1) keel ja kirjandus;
+  2) võõrkeeled;
+  3) matemaatika;
+  4) loodusained;
+  5) sotsiaalained;
+  6) kunstiained;
+  7) kehaline kasvatus.
+
+Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädevuse kujundamine. Valdkonnapädevuste kujunemist ning gümnaasiumi õppe- ja kasvatuseesmärkide saavutamist toetavad ainekavades esitatud õpitulemused, lõiming teiste ainevaldkondade õppeainetega ning tunni- ja kooliväline tegevus.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ainevaldkond</rdfs:label>
+        <rdfs:label xml:lang="en">Subject area</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/AinevaldkonnaPadevus">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/opivaljund/Padevus"/>
+        <rdfs:label xml:lang="et">Ainevaldkonna pädevus</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/Eesmark">
+        <owl:disjointWith rdf:resource="https://schema.edu.ee/oppekava/Oppeaine"/>
+        <rdfs:label xml:lang="et">Ainevaldkonna eesmärk</rdfs:label>
+        <rdfs:label xml:lang="en">Curriculum aims</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/IndividuaalneOppekava">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/oppekava/Ainekava"/>
+        <rdfs:comment xml:lang="et">Individuaalne õppekava on Individuaalse õppekava järgi õppimise korra kohaselt hariduslike erivajadustega õpilase jaoks koostatud õppekava, mis loob õpilasele tingimused võimetekohaseks õppimiseks ja arenemiseks.
+
+Individuaalne õppekava koostatakse õpilasele, kellel on raskusi oma klassikaaslastega samal ajal samas ruumis või vastavale klassile koostatud töökava alusel töötada. Hariduslikeks erivajadusteks võivad olla õpilase eriline andekus, õpi- ja käitumisraskused, terviserikked, puuded või pikemaaegne õpikeskkonnast eemal viibimine.
+
+Vt https://et.wikipedia.org/wiki/Individuaalne_%C3%B5ppekava</rdfs:comment>
+        <rdfs:label xml:lang="et">Individuaalne õppekava</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/Koolitus">
+        <rdfs:comment xml:lang="et">Kavandatud süsteemne õpe, mille käigus antakse edasi kindlaid oskusi, teadmisi ja infot ning kujundatakse hoiakuid ja suhtumisi.</rdfs:comment>
+        <rdfs:label xml:lang="et">Koolitus</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/OpetajaTookava">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/oppekava/Oppekava"/>
+        <rdfs:comment xml:lang="et">Töökava on õpetajale igapäevane abivahend, mis võimaldab tal õppeprotsessi kavandada ja analüüsida ning iseennast hinnata. Töökava on dokument, mille alusel toimub õppetöö tundides.</rdfs:comment>
+        <rdfs:label xml:lang="et">Õpetaja töökava</rdfs:label>
+    </owl:Class>
+   
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/Oppeaine">
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:label xml:lang="et">Õppeaine</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/OppeasutuseOppekava">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/oppekava/Oppekava"/>
+        <rdfs:comment xml:lang="et">Õppeasutuse õppekava on õppe- ja kasvatustegevuse alusdokument, milles kirjeldatakse õppe rõhuasetused ja tegevused õppekava täitmiseks.</rdfs:comment>
+        <rdfs:label xml:lang="et">Õppeasutuse õppekava</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/Oppekava">
+        <rdfs:comment xml:lang="et">Õppe ja kasvatuse alusdokument, mis määrab õppe- ja kasvatuseesmärgid, õppe sisu ja mahu, metoodika põhimõtted ning hindamise alused, nõuded õppekeskkonnale vms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Curriculum</rdfs:label>
+        <rdfs:label xml:lang="et">Õppekava</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/RiiklikOppekava">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/oppekava/Oppekava"/>
+        <rdfs:label xml:lang="en">National curriculum</rdfs:label>
+        <rdfs:label xml:lang="et">Riiklik õppekava</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/oppekava/Teema">
+        <rdfs:comment xml:lang="et">Aine sisuühik, mida õpetatakse a&apos;la &quot;2. maailmasõda ajaloos&quot; või &quot;Geomeetria&quot;. Teemad on kasutusel õppematerjalide lõimimiseks.</rdfs:comment>
+        <rdfs:label xml:lang="et">Teema</rdfs:label>
+        <rdfs:label xml:lang="en">Topic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+   
+
+    <!-- https://schema.edu.ee/ained/bioloogia -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/ained/bioloogia">
+        <rdf:type rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:label xml:lang="en">Biology</rdfs:label>
+        <rdfs:label xml:lang="et">Bioloogia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/ained/fuusika -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/ained/fuusika">
+        <rdf:type rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:label xml:lang="et">Füüsika</rdfs:label>
+        <rdfs:label xml:lang="en">Physics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/ained/geograafia -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/ained/geograafia">
+        <rdf:type rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:label xml:lang="et">Geograafia</rdfs:label>
+        <rdfs:label xml:lang="en">Geography</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/ained/keemia -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/ained/keemia">
+        <rdf:type rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:label xml:lang="en">Chemistry</rdfs:label>
+        <rdfs:label xml:lang="et">Keemia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/ained/loodusopetus -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/ained/loodusopetus">
+        <rdf:type rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:label xml:lang="et">Loodusõpetus</rdfs:label>
+        <rdfs:label xml:lang="en">Natural science</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/ained/matemaatika -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/ained/matemaatika">
+        <rdf:type rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:label xml:lang="et">Matemaatika</rdfs:label>
+        <rdfs:label xml:lang="en">Mathematics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/ainevaldkonnad/loodusained -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkonnad/loodusained">
+        <rdf:type rdf:resource="https://schema.edu.ee/Ainevaldkond"/>
+        <ainevaldkonnaEesmark rdf:resource="https://schema.edu.ee/eesmargid/loodusainete-opetamise-eesmark-gumnaasiumis"/>
+        <ainevaldkonnaEesmark rdf:resource="https://schema.edu.ee/eesmargid/loodusainete-opetamise-eesmark-pohikoolis"/>
+        <rdfs:label xml:lang="et">Loodusained</rdfs:label>
+        <rdfs:label xml:lang="en">Natural science subjects</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/ainevaldkonnad/matemaatika -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkonnad/matemaatika">
+        <rdf:type rdf:resource="https://schema.edu.ee/Ainevaldkond"/>
+        <rdfs:label xml:lang="et">Matemaatika</rdfs:label>
+        <rdfs:label xml:lang="en">Mathematics</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/eesmargid/loodusainete-opetamise-eesmark-gumnaasiumis -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/eesmargid/loodusainete-opetamise-eesmark-gumnaasiumis">
+        <rdf:type rdf:resource="https://schema.edu.ee/Eesmark"/>
+        <eesmargiSonastus xml:lang="et">Kujundada õpilaste loodusteaduslikku ja tehnoloogiaalast kirjaoskust.</eesmargiSonastus>
+        <haridusAste xml:lang="et">Gümnaasium</haridusAste>
+        <rdfs:label xml:lang="et">Loodusainete õpetamise eesmärk gümnaasiumis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/eesmargid/loodusainete-opetamise-eesmark-pohikoolis -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/eesmargid/loodusainete-opetamise-eesmark-pohikoolis">
+        <rdf:type rdf:resource="https://schema.edu.ee/Eesmark"/>
+        <ainevaldkonnaOpivaljund rdf:resource="https://schema.edu.ee/padevused/huvitub-umbritsevast-keskkonnast-ja-selle-uurimisest-ning-loodusteaduste-oppimisest"/>
+        <ainevaldkonnaOpivaljund rdf:resource="https://schema.edu.ee/padevused/leiab-loodusteaduste-ja-tehnoloogiaalast-infot-erinevatest-allikatest-ning-hindab-selle-usaldusvaarsust"/>
+        <ainevaldkonnaOpivaljund rdf:resource="https://schema.edu.ee/padevused/markab-sonastab-ja-lahendab-probleeme"/>
+        <ainevaldkonnaOpivaljund rdf:resource="https://schema.edu.ee/padevused/moistab-teaduse-kui-inimtegevuse-vormi-iseloomulikke-tunnuseid"/>
+        <ainevaldkonnaOpivaljund rdf:resource="https://schema.edu.ee/padevused/on-motiveeritud-elukestvaks-oppeks-tunneb-loodusteaduste-ning-tehnoloogiaga-seotud-karjaarivoimalusi"/>
+        <ainevaldkonnaOpivaljund rdf:resource="https://schema.edu.ee/padevused/sonastab-loodusteadustega-seotud-uurimiskusimusi-kavandab-viib-labi-uuringut"/>
+        <ainevaldkonnaOpivaljund rdf:resource="https://schema.edu.ee/padevused/vaartustab-umbritsevat-keskkonda-kui-tervikut"/>
+        <ainevaldkonnaOpivaljund rdf:resource="https://schema.edu.ee/padevused/vaatleb-analuusib-selgitab-umbritseva-keskkonna-objekte-nahtusi-protsesse-ning-nendevahelisi-seoseid"/>
+        <eesmargiSonastus xml:lang="et">Kujundada õpilaste loodusteaduslikku ja tehnoloogiaalast kirjaoskust</eesmargiSonastus>
+        <haridusAste xml:lang="et">Põhikool</haridusAste>
+        <rdfs:label xml:lang="et">Loodusainete õpetamise eesmärk põhikoolis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-nahtusi -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-nahtusi">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Analüüsib ümbritseva keskkonna nähtusi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-objekte -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-objekte">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Analüüsib ümbritseva keskkonna objekte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-objektide-nahtuste-ja-protsesside-vahelisi-seoseid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-objektide-nahtuste-ja-protsesside-vahelisi-seoseid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Analüüsib ümbritseva keskkonna objektide, nähtuste ja protsesside vahelisi seoseid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-protsesse -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-protsesse">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Analüüsib ümbritseva keskkonna protsesse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/hindab-loodusteadustealase-info-usaldusvaarsust -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/hindab-loodusteadustealase-info-usaldusvaarsust">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Hindab loodusteadustealase info usaldusväärsust</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/hindab-tehnoloogiaalase-info-usaldusvaarsust -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/hindab-tehnoloogiaalase-info-usaldusvaarsust">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Hindab tehnoloogiaalase info usaldusväärsust</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/huvitub-loodusteaduste-oppimisest -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/huvitub-loodusteaduste-oppimisest">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Huvitub loodusteaduste õppimisest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/huvitub-umbritseva-keskkonna-uurimisest -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/huvitub-umbritseva-keskkonna-uurimisest">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Huvitub ümbritseva keskkonna uurimisest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/huvitub-umbritsevast-keskkonnast -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/huvitub-umbritsevast-keskkonnast">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Huvitub ümbritsevast keskkonnast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/huvitub-umbritsevast-keskkonnast-ja-selle-uurimisest-ning-loodusteaduste-oppimisest -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/huvitub-umbritsevast-keskkonnast-ja-selle-uurimisest-ning-loodusteaduste-oppimisest">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/huvitub-loodusteaduste-oppimisest"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/huvitub-umbritseva-keskkonna-uurimisest"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/huvitub-umbritsevast-keskkonnast"/>
+        <rdfs:comment xml:lang="et">Huvitub ümbritsevast keskkonnast ja selle uurimisest ning loodusteaduste õppimisest.</rdfs:comment>
+        <rdfs:label xml:lang="et">Huvitub ümbritsevast keskkonnast ja selle uurimisest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/jargib-tervislikke-eluviise -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/jargib-tervislikke-eluviise">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Järgib tervislikke eluviise</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/kaitub-turvaliselt -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/kaitub-turvaliselt">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Käitub turvaliselt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/kasutab-andmekogumiseks-meedia-ja-tehnoloogiavahendeid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/kasutab-andmekogumiseks-meedia-ja-tehnoloogiavahendeid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Kasutab andmekogumiseks meedia- ja tehnoloogiavahendeid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/kasutab-koostooks-meedia-ja-tehnoloogiavahendeid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/kasutab-koostooks-meedia-ja-tehnoloogiavahendeid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Kasutab koostööks meedia- ja tehnoloogiavahendeid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/kasutab-kriitilist-motlemist -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/kasutab-kriitilist-motlemist">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Kasutab kriitilist mõtlemist</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/kasutab-loodusainetes-omandatud-oskusi -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/kasutab-loodusainetes-omandatud-oskusi">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Kasutab loodusainetes omandatud oskusi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/kasutab-loodusainetes-omandatud-teadmisi -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/kasutab-loodusainetes-omandatud-teadmisi">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Kasutab loodusainetes omandatud teadmisi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/kasutab-loodusteadustele-omast-keelt -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/kasutab-loodusteadustele-omast-keelt">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Kasutab loodusteadustele omast keelt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/kasutab-loovat-motlemist -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/kasutab-loovat-motlemist">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Kasutab loovat mõtlemist</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/kasutab-oppimiseks-meedia-ja-tehnoloogiavahendeid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/kasutab-oppimiseks-meedia-ja-tehnoloogiavahendeid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Kasutab õppimiseks meedia- ja tehnoloogiavahendeid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/kavandab-uuringut-jargides-ohutusnoudeid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/kavandab-uuringut-jargides-ohutusnoudeid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Kavandab uuringut järgides ohutusnõudeid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/lahendab-probleeme -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/lahendab-probleeme">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Lahendab probleeme</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/leiab-loodusteaduste-ja-tehnoloogiaalast-infot-erinevatest-allikatest-ning-hindab-selle-usaldusvaarsust -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/leiab-loodusteaduste-ja-tehnoloogiaalast-infot-erinevatest-allikatest-ning-hindab-selle-usaldusvaarsust">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/hindab-loodusteadustealase-info-usaldusvaarsust"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/hindab-tehnoloogiaalase-info-usaldusvaarsust"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/kasutab-andmekogumiseks-meedia-ja-tehnoloogiavahendeid"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/kasutab-koostooks-meedia-ja-tehnoloogiavahendeid"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/kasutab-oppimiseks-meedia-ja-tehnoloogiavahendeid"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/leiab-loodusteadustealast-infot-erinevatest-allikatest"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/leiab-tehnoloogiaalast-infot-erinevatest-allikatest"/>
+        <rdfs:comment xml:lang="et">Leiab loodusteaduste- ja tehnoloogiaalast infot erinevatest allikatest ning hindab selle usaldusväärsust; kasutab õppimiseks, andmekogumiseks ning koostööks meedia- ja tehnoloogiavahendeid.</rdfs:comment>
+        <rdfs:label xml:lang="et">Leiab loodusteaduste- ja tehnoloogiaalast infot erinevatest allikatest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/leiab-loodusteadustealast-infot-erinevatest-allikatest -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/leiab-loodusteadustealast-infot-erinevatest-allikatest">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Leiab loodusteadustealast infot erinevatest allikatest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/leiab-tehnoloogiaalast-infot-erinevatest-allikatest -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/leiab-tehnoloogiaalast-infot-erinevatest-allikatest">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Leiab tehnoloogiaalast infot erinevatest allikatest</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/markab-probleeme -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/markab-probleeme">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Märkab probleeme</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/markab-sonastab-ja-lahendab-probleeme -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/markab-sonastab-ja-lahendab-probleeme">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/kasutab-kriitilist-motlemist"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/kasutab-loovat-motlemist"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/lahendab-probleeme"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/markab-probleeme"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/sonastab-probleeme"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/teeb-igapaevaeluga-seotud-pohjendatud-otsuseid"/>
+        <rdfs:comment xml:lang="et">Märkab, sõnastab ja lahendab probleeme, teeb igapäevaeluga seotud põhjendatud otsuseid, kasutab loovat ja kriitilist mõtlemist.</rdfs:comment>
+        <rdfs:label xml:lang="et">Märkab, sõnastab ja lahendab probleeme.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/moistab-loodusteaduste-ja-tehnoloogia-seoseid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/moistab-loodusteaduste-ja-tehnoloogia-seoseid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Mõistab loodusteaduste ja tehnoloogia seoseid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/moistab-loodusteaduste-olulisust -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/moistab-loodusteaduste-olulisust">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Mõistab loodusteaduste olulisust</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/moistab-loodusteaduste-piiranguid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/moistab-loodusteaduste-piiranguid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Mõistab loodusteaduste piiranguid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/moistab-loodusteaduste-riske -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/moistab-loodusteaduste-riske">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Mõistab loodusteaduste riske</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/moistab-teaduse-kui-inimtegevuse-vormi-iseloomulikke-tunnuseid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/moistab-teaduse-kui-inimtegevuse-vormi-iseloomulikke-tunnuseid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/moistab-loodusteaduste-ja-tehnoloogia-seoseid"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/moistab-loodusteaduste-olulisust"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/moistab-loodusteaduste-piiranguid"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/moistab-loodusteaduste-riske"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/moistab-teaduse-olemust"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/moistab-tehnoloogia-olulisust"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/moistab-tehnoloogia-piiranguid"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/moistab-tehnoloogia-riske"/>
+        <rdfs:comment xml:lang="et">Mõistab teaduse kui inimtegevuse vormi iseloomulikke tunnuseid (teaduse olemust), loodusteaduste ja tehnoloogia seoseid, olulisust, piiranguid ning riske.</rdfs:comment>
+        <rdfs:label xml:lang="et">Mõistab teaduse kui inimtegevuse vormi iseloomulikke tunnuseid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/moistab-teaduse-olemust -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/moistab-teaduse-olemust">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Mõistab teaduse olemust</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/moistab-tehnoloogia-olulisust -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/moistab-tehnoloogia-olulisust">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Mõistab tehnoloogia olulisust</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/moistab-tehnoloogia-piiranguid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/moistab-tehnoloogia-piiranguid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Mõistab tehnoloogia piiranguid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/moistab-tehnoloogia-riske -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/moistab-tehnoloogia-riske">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Mõistab tehnoloogia riske</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/on-motiveeritud-elukestvaks-oppeks -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/on-motiveeritud-elukestvaks-oppeks">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">On motiveeritud elukestvaks õppeks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/on-motiveeritud-elukestvaks-oppeks-tunneb-loodusteaduste-ning-tehnoloogiaga-seotud-karjaarivoimalusi -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/on-motiveeritud-elukestvaks-oppeks-tunneb-loodusteaduste-ning-tehnoloogiaga-seotud-karjaarivoimalusi">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/on-motiveeritud-elukestvaks-oppeks"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/tunneb-loodusteadustega-seotud-karjaarivõimalusi"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/tunneb-tehnoloogiaga-seotud-karjaarivoimalusi"/>
+        <rdfs:comment xml:lang="et">On motiveeritud elukestvaks õppeks, tunneb loodusteaduste ning tehnoloogiaga seotud karjäärivõimalusi.</rdfs:comment>
+        <rdfs:label xml:lang="et">On motiveeritud elukestvaks õppeks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-nahtusi -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-nahtusi">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Selgitab ümbritseva keskkonna nähtusi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-objekte -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-objekte">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Selgitab ümbritseva keskkonna objekte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-objektide-nahtuste-ja-protsesside-vahelisi-seoseid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-objektide-nahtuste-ja-protsesside-vahelisi-seoseid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Selgitab ümbritseva keskkonna objektide, nähtuste ja protsesside vahelisi seoseid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-protsesse -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-protsesse">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Selgitab ümbritseva keskkonna protsesse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/sonastab-loodusteadustega-seotud-uurimiskusimusi -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/sonastab-loodusteadustega-seotud-uurimiskusimusi">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Sõnastab loodusteadustega seotud uurimisküsimusi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/sonastab-loodusteadustega-seotud-uurimiskusimusi-kavandab-viib-labi-uuringut -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/sonastab-loodusteadustega-seotud-uurimiskusimusi-kavandab-viib-labi-uuringut">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/kavandab-uuringut-jargides-ohutusnoudeid"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/sonastab-loodusteadustega-seotud-uurimiskusimusi"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/teeb-toenduspõhiseid-jareldusi"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/viib-labi-uuringut-jargides-ohutusnoudeid"/>
+        <rdfs:comment xml:lang="et">Sõnastab loodusteadustega seotud uurimisküsimusi, kavandab ja viib läbi uuringut järgides ohutusnõudeid ning teeb tõenduspõhiseid järeldusi.</rdfs:comment>
+        <rdfs:label xml:lang="et">Sõnastab loodusteadustega seotud uurimisküsimusi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/sonastab-probleeme -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/sonastab-probleeme">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Sõnastab probleeme</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/teeb-igapaevaeluga-seotud-pohjendatud-otsuseid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/teeb-igapaevaeluga-seotud-pohjendatud-otsuseid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Teeb igapäevaeluga seotud põhjendatud otsuseid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/teeb-toenduspõhiseid-jareldusi -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/teeb-toenduspõhiseid-jareldusi">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Teeb tõenduspõhiseid järeldusi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/tunneb-loodusteadustega-seotud-karjaarivõimalusi -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/tunneb-loodusteadustega-seotud-karjaarivõimalusi">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Tunneb loodusteadustega seotud karjäärivõimalusi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/tunneb-tehnoloogiaga-seotud-karjaarivoimalusi -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/tunneb-tehnoloogiaga-seotud-karjaarivoimalusi">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Tunneb tehnoloogiaga seotud karjäärivõimalusi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/vaartustab-jatkusuutlikkust -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/vaartustab-jatkusuutlikkust">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Väärtustab jätkusuutlikkust</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/vaartustab-looduslikku-mitmekesisust -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/vaartustab-looduslikku-mitmekesisust">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Väärtustab looduslikku mitmekesisust</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/vaartustab-umbritsevat-keskkonda-kui-tervikut -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/vaartustab-umbritsevat-keskkonda-kui-tervikut">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/jargib-tervislikke-eluviise"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/kaitub-turvaliselt"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/vaartustab-jatkusuutlikkust"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/vaartustab-looduslikku-mitmekesisust"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/vaartustab-umbritsevat-keskkonda-kui-tervikut"/>
+        <rdfs:comment xml:lang="et">Väärtustab ümbritsevat keskkonda kui tervikut, looduslikku mitmekesisust ja jätkusuutlikkust, käitub turvaliselt ja järgib
+tervislikke eluviise.</rdfs:comment>
+        <rdfs:label xml:lang="et">Väärtustab ümbritsevat keskkonda kui tervikut</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/vaatleb-analuusib-selgitab-umbritseva-keskkonna-objekte-nahtusi-protsesse-ning-nendevahelisi-seoseid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/vaatleb-analuusib-selgitab-umbritseva-keskkonna-objekte-nahtusi-protsesse-ning-nendevahelisi-seoseid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-nahtusi"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-objekte"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-objektide-nahtuste-ja-protsesside-vahelisi-seoseid"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/analuusib-umbritseva-keskkonna-protsesse"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/kasutab-loodusainetes-omandatud-oskusi"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/kasutab-loodusainetes-omandatud-teadmisi"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/kasutab-loodusteadustele-omast-keelt"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-nahtusi"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-objekte"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-objektide-nahtuste-ja-protsesside-vahelisi-seoseid"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/selgitab-umbritseva-keskkonna-protsesse"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-nahtusi"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-objekte"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-objektide-nahtuste-ja-protsesside-vahelisi-seoseid"/>
+        <opivaljundKoosneb rdf:resource="https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-protsesse"/>
+        <rdfs:comment xml:lang="et">Vaatleb, analüüsib ja selgitab ümbritseva keskkonna objekte, nähtusi, protsesse ning nendevahelisi seoseid, rakendab loodusainetes omandatud teadmisi ja oskusi, kasutades loodusteadustele omast keelt.</rdfs:comment>
+        <rdfs:label xml:lang="et">Vaatleb, analüüsib ja selgitab ümbritseva keskkonna objekte, nähtusi, protsesse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-nahtusi -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-nahtusi">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Vaatleb ümbritseva keskkonna nähtusi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-objekte -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-objekte">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Vaatleb ümbritseva keskkonna objekte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-objektide-nahtuste-ja-protsesside-vahelisi-seoseid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-objektide-nahtuste-ja-protsesside-vahelisi-seoseid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Vaatleb ümbritseva keskkonna objektide, nähtuste ja protsesside vahelisi seoseid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-protsesse -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/vaatleb-umbritseva-keskkonna-protsesse">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Vaatleb ümbritseva keskkonna protsesse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://schema.edu.ee/padevused/viib-labi-uuringut-jargides-ohutusnoudeid -->
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/padevused/viib-labi-uuringut-jargides-ohutusnoudeid">
+        <rdf:type rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Viib läbi uuringut järgides ohutusnõudeid</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

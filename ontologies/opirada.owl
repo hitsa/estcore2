@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://schema.edu.ee/opirada/"
+     xml:base="https://schema.edu.ee/opirada/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="https://schema.edu.ee/opirada/">
+    <owl:Ontology rdf:about="https://schema.edu.ee/opirada/">
+        <owl:versionIRI rdf:resource="https://schema.edu.ee/opirada/0.1/"/>
+        <rdfs:comment xml:lang="et">Personaalse õpiraja ontoloogia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Ontology for individual learning path(s).</rdfs:comment>
+    </owl:Ontology>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/opirada/Opirada">
+        <rdfs:comment xml:lang="et">Õppija poolt läbitud tee, mis sisaldab (e-)õppe tegevusi, mis võimaldavad teadmiste, oskuste ja pädevuste järjepidevat omandamist.</rdfs:comment>
+        <rdfs:label xml:lang="et">Õpirada</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
