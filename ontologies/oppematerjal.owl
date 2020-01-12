@@ -28,6 +28,12 @@
         <rdfs:label xml:lang="et">Õppematerjali õpiväljund</rdfs:label>
     </owl:ObjectProperty>
 
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppematerjal/ulesanneKoosneb">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/oppematerjal/Ulesanne"/>
+        <rdfs:range rdf:resource="https://schema.org/Question"/>
+        <rdfs:label xml:lang="et">Ülesanne koosneb üksikküsimustest</rdfs:label>
+    </owl:ObjectProperty>    
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -55,9 +61,16 @@
     </owl:Class>
     
     <owl:Class rdf:about="https://schema.edu.ee/oppematerjal/Oppematerjal">
+        <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
         <rdfs:comment xml:lang="et">Nii digitaalsel kui muul kujul õppematerjal. Digitaalsel kujul avaldatud õppematerjal on nt: e-õpik, õpiotstarbeline veebivideo ja mobiilirakendus, õpimäng, e-tööleht, veebipõhine test, õpiobjekt.</rdfs:comment>
         <rdfs:label xml:lang="en">Learning material</rdfs:label>
         <rdfs:label xml:lang="et">Õppematerjal</rdfs:label>
     </owl:Class>
     
+    <owl:Class rdf:about="https://schema.edu.ee/oppematerjal/Ulesanne">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/oppematerjal/Oppematerjal"/>
+        <rdfs:comment xml:lang="et">Kohustusena antud töö; harjutustöö koolis. Ülesanne koosneb tööjuhendist, (üksik)küsimustest ja vastustest. Kasutusel ka hindamisvahendina.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ülesanne</rdfs:label>
+    </owl:Class>
+   
 </rdf:RDF>

@@ -16,5 +16,8 @@
 		<owl:imports rdf:resource="https://schema.edu.ee/oppematerjal/"/>
 		<owl:imports rdf:resource="https://schema.edu.ee/opivaljund/"/>
 		<owl:imports rdf:resource="https://schema.edu.ee/opirada/"/>
+		<owl:imports rdf:resource="https://schema.edu.ee/padevused/"/>
+		<owl:imports rdf:resource="https://schema.edu.ee/oskused/"/>
+		<owl:imports rdf:resource="https://schema.org/"/>
     </owl:Ontology>    
 </rdf:RDF>

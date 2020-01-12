@@ -9,10 +9,12 @@
      xmlns:schema="https://schema.edu.ee/opivaljund/">
     <owl:Ontology rdf:about="https://schema.edu.ee/opivaljund/">
         <owl:versionIRI rdf:resource="https://schema.edu.ee/opivaljund/0.1/"/>
-        <rdfs:comment xml:lang="et">Õpiväljundi(te) ontoloogia.</rdfs:comment>
         <rdfs:comment xml:lang="en">Ontology for learning outcomes.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Õpiväljundi(te) ontoloogia.</rdfs:comment>
     </owl:Ontology>
     
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -20,6 +22,33 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
+    
+
+
+    <!-- https://schema.edu.ee/opivaljund/onEelduseks -->
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/opivaljund/onEelduseks">
+        <owl:inverseOf rdf:resource="https://schema.edu.ee/opivaljund/opivaljundEeldab"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
+        <rdfs:label xml:lang="et">Õpiväljund on eelduseks</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.edu.ee/opivaljund/opivaljundEeldab -->
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/opivaljund/opivaljundEeldab">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
+        <rdfs:comment xml:lang="et">Õpiväljundi omandamiseks on vajalik teine õpiväljund, nt oskuse jaoks on vajalik teadmine.</rdfs:comment>
+        <rdfs:label xml:lang="et">Õpiväljundi eeldus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.edu.ee/opivaljund/opivaljundKoosneb -->
 
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/opivaljund/opivaljundKoosneb">
         <owl:inverseOf rdf:resource="https://schema.edu.ee/opivaljund/osaOpivaljundist"/>
@@ -29,11 +58,17 @@
         <rdfs:label xml:lang="et">Õpiväljund koosneb</rdfs:label>
     </owl:ObjectProperty>
     
+
+
+    <!-- https://schema.edu.ee/opivaljund/osaOpivaljundist -->
+
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/opivaljund/osaOpivaljundist">
         <rdfs:domain rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
         <rdfs:label xml:lang="et">Osa õpiväljundist</rdfs:label>
     </owl:ObjectProperty>
+    
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -43,11 +78,10 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:Class rdf:about="https://schema.edu.ee/opivaljund/Opivaljund">
-        <rdfs:comment xml:lang="et">Õppimise tulemusena omandatavad teadmised, oskused ja hoiakud või nende kogumid (pädevused), mille olemasolu ja/või saavutatuse taset on võimalik tõendada ja hinnata. Nt &quot;oskab liita 10 piires&quot;.</rdfs:comment>
-        <rdfs:label xml:lang="en">Learning outcome</rdfs:label>
-        <rdfs:label xml:lang="et">Õpiväljund</rdfs:label>
-    </owl:Class>
+    
+
+
+    <!-- https://schema.edu.ee/opivaljund/Hoiak -->
 
     <owl:Class rdf:about="https://schema.edu.ee/opivaljund/Hoiak">
         <rdfs:subClassOf rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
@@ -57,6 +91,20 @@
         <rdfs:label xml:lang="et">Hoiak</rdfs:label>
     </owl:Class>
     
+
+
+    <!-- https://schema.edu.ee/opivaljund/Opivaljund -->
+
+    <owl:Class rdf:about="https://schema.edu.ee/opivaljund/Opivaljund">
+        <rdfs:comment xml:lang="et">Õppimise tulemusena omandatavad teadmised, oskused ja hoiakud või nende kogumid (pädevused), mille olemasolu ja/või saavutatuse taset on võimalik tõendada ja hinnata. Nt &quot;oskab liita 10 piires&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">Learning outcome</rdfs:label>
+        <rdfs:label xml:lang="et">Õpiväljund</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.edu.ee/opivaljund/Oskus -->
+
     <owl:Class rdf:about="https://schema.edu.ee/opivaljund/Oskus">
         <rdfs:subClassOf rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
         <owl:disjointWith rdf:resource="https://schema.edu.ee/opivaljund/Teadmine"/>
@@ -65,6 +113,10 @@
         <rdfs:label xml:lang="en">Skill</rdfs:label>
     </owl:Class>
     
+
+
+    <!-- https://schema.edu.ee/opivaljund/Padevus -->
+
     <owl:Class rdf:about="https://schema.edu.ee/opivaljund/Padevus">
         <rdfs:subClassOf rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
         <rdfs:comment xml:lang="et">Teadmiste, oskuste ja hoiakute kogum, mis tagab suutlikkuse teatud tegevusalal või -valdkonnas loovalt, ettevõtlikult ja paindlikult toimida.</rdfs:comment>
@@ -72,11 +124,19 @@
         <rdfs:label xml:lang="et">Pädevus</rdfs:label>
     </owl:Class>
     
+
+
+    <!-- https://schema.edu.ee/opivaljund/Teadmine -->
+
     <owl:Class rdf:about="https://schema.edu.ee/opivaljund/Teadmine">
         <rdfs:subClassOf rdf:resource="https://schema.edu.ee/opivaljund/Opivaljund"/>
         <rdfs:comment xml:lang="et">Õpingutega või kogemustest omandatud faktide, reeglite, seaduspärasuste jms tundmine.</rdfs:comment>
         <rdfs:label xml:lang="en">Knowledge</rdfs:label>
         <rdfs:label xml:lang="et">Teadmine</rdfs:label>
     </owl:Class>
-    
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

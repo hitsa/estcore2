@@ -24,28 +24,16 @@
      -->
 
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/hindamine/hindabOpitulemust">
-        <rdfs:domain rdf:resource="https://schema.edu.ee/hindamine/Ulesanne"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/hindamine/Test"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/hindamine/Opitulemus"/>
         <rdfs:comment xml:lang="et">Ülesanne hindab mil määral on õpitulemus omandatud. Küsimus hindab kas konkreetse küsimusega seotud õpitulemus on saavutatud või mitte.</rdfs:comment>
         <rdfs:label xml:lang="et">Hindab õpitulemuse saavutatust</rdfs:label>
     </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/hindamine/kusimuseVastus">
-        <rdfs:domain rdf:resource="https://schema.edu.ee/hindamine/Kusimus"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/hindamine/Vastus"/>
-        <rdfs:label xml:lang="et">Küsimuse vastus</rdfs:label>
-    </owl:ObjectProperty>
-    
+        
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/hindamine/testKoosneb">
         <rdfs:domain rdf:resource="https://schema.edu.ee/hindamine/Test"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/hindamine/Ulesanne"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/oppematerjal/Ulesanne"/>
         <rdfs:label xml:lang="et">Test koosneb ülesannetest</rdfs:label>
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/hindamine/ulesanneKoosneb">
-        <rdfs:domain rdf:resource="https://schema.edu.ee/hindamine/Ulesanne"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/hindamine/Kusimus"/>
-        <rdfs:label xml:lang="et">Ülesanne koosneb üksikküsimustest</rdfs:label>
     </owl:ObjectProperty>
     
     <!-- 
@@ -55,10 +43,6 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
-    
-    
-
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -80,23 +64,7 @@ Kontrolltöid ei planeerita esmaspäevale ja reedele, samuti õppepäeva esimese
 Formaalne definitsioon puudub. Vt https://www.eesti.ee/et/haridus-ja-teadus/ueldharidus/koolidele-kehtestatud-uehtsed-normid/</rdfs:comment>
         <rdfs:label xml:lang="et">Kontrolltöö</rdfs:label>
     </owl:Class>
-    
-    <owl:Class rdf:about="https://schema.edu.ee/hindamine/Kusimus">
-        <rdfs:label xml:lang="et">Küsimus</rdfs:label>
-    </owl:Class>
-    
-    <owl:Class rdf:about="https://schema.edu.ee/hindamine/MuuVastus">
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/hindamine/Vastus"/>
-        <rdfs:comment xml:lang="et">Ülesande muu vastus.</rdfs:comment>
-        <rdfs:label xml:lang="et">Muu vastus</rdfs:label>
-    </owl:Class>
-    
-    <owl:Class rdf:about="https://schema.edu.ee/hindamine/SoovituslikVastus">
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/hindamine/Vastus"/>
-        <rdfs:comment xml:lang="et">Ülesande õige / soovituslik vastus.</rdfs:comment>
-        <rdfs:label xml:lang="et">Soovituslik vastus</rdfs:label>
-    </owl:Class>
-    
+        
     <owl:Class rdf:about="https://schema.edu.ee/hindamine/Tasemetoo">
         <rdfs:subClassOf rdf:resource="https://schema.edu.ee/hindamine/Test"/>
         <rdfs:comment xml:lang="et">Kokkuvõttev test, kokkulepitud astme (kooliastme) lõpus saavutatud oskused ja teadmised; kooliastme lõpus teadmiste ja oskuste omandatust kontrolliv üleriigiline töö.</rdfs:comment>
@@ -115,18 +83,7 @@ Formaalne definitsioon puudub. Vt https://www.eesti.ee/et/haridus-ja-teadus/ueld
         <rdfs:comment xml:lang="et">Väikesemahuline kirjalik töö tunnis õpitu kontrollimiseks ja hindamiseks.</rdfs:comment>
         <rdfs:label xml:lang="et">Tunnikontroll</rdfs:label>
     </owl:Class>
-    
-    <owl:Class rdf:about="https://schema.edu.ee/hindamine/Ulesanne">
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/oppematerjal/Oppematerjal"/>
-        <rdfs:comment xml:lang="et">Kohustusena antud töö; harjutustöö koolis. Ülesanne koosneb tööjuhendist, (üksik)küsimustest ja vastustest. Kasutusel ka hindamisvahendina.</rdfs:comment>
-        <rdfs:label xml:lang="et">Ülesanne</rdfs:label>
-    </owl:Class>
-    
-    <owl:Class rdf:about="https://schema.edu.ee/hindamine/Vastus">
-        <rdfs:comment xml:lang="et">Ülesande osa, mis vastab küsimusele.</rdfs:comment>
-        <rdfs:label xml:lang="et">Küsimuse vastus</rdfs:label>
-    </owl:Class>
-    
+            
     <owl:Class rdf:about="https://schema.edu.ee/hindamine/Opitulemus">
         <rdfs:comment xml:lang="et">Kellegi teadmistele, oskustele, võimetele, töötulemustele antud hinnang, mida väljendatakse numbrites, tähtedes, punktides vm hindamisühikutes. Lihtsustatult, õpitulemus esitab õpiväljundi saavutatuse taset. Eksami või arvestuse sooritus.</rdfs:comment>
         <rdfs:label xml:lang="en">Learning assessment</rdfs:label>

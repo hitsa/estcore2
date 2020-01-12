@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://schema.edu.ee/oskused/"
+     xml:base="https://schema.edu.ee/oskused/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="https://schema.edu.ee/oskused/">
+    <owl:Ontology rdf:about="https://schema.edu.ee/oskused/">
+        <owl:versionIRI rdf:resource="https://schema.edu.ee/oskused/0.1/"/>
+        <rdfs:comment xml:lang="et">Õppekava(de) ontoloogia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Ontology for learning outcomes in national curriculum and related curricula.</rdfs:comment>
+		<owl:imports rdf:resource="https://schema.edu.ee/opivaljund/"/>
+    </owl:Ontology>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/pindala-mootmine">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+		<opivaljundKoosneb rdf:resource="https://schema.edu.ee/oskused/pindala-mootmine-otsemootmise-teel"/>
+		<opivaljundKoosneb rdf:resource="https://schema.edu.ee/oskused/pindala-mootmine-kaudmootmise-teel"/>
+		<opivaljundEeldab rdf:resource="https://schema.edu.ee/oskused/pindala-arvutamine"/>
+        <rdfs:label xml:lang="et">Pindala mõõtmine</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/pindala-mootmine-otsemootmise-teel">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+        <rdfs:label xml:lang="et">Pindala mõõtmine otsemõõtmise teel</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/pindala-mootmine-kaudmootmise-teel">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+        <rdfs:label xml:lang="et">Pindala mõõtmine kaudmõõtmise teel</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/pindala-arvutamine">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+		<opivaljundKoosneb rdf:resource="https://schema.edu.ee/oskused/nelinurga-pindala-arvutamine"/>
+		<opivaljundKoosneb rdf:resource="https://schema.edu.ee/oskused/kolmnurga-pindala-arvutamine"/>
+		<opivaljundEeldab rdf:resource="https://schema.edu.ee/oskused/ringi-pindala-arvutamine"/>
+		<opivaljundEeldab rdf:resource="https://teksaurus.keeleressursid.ee/synset/403155"/>
+        <rdfs:label xml:lang="et">Pindala arvutamine</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/nelinurga-pindala-arvutamine">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+		<opivaljundKoosneb rdf:resource="https://schema.edu.ee/oskused/ruudu-pindala-arvutamine"/>
+		<opivaljundKoosneb rdf:resource="https://schema.edu.ee/oskused/ristkuliku-pindala-arvutamine"/>
+		<opivaljundKoosneb rdf:resource="https://schema.edu.ee/oskused/roopkuliku-pindala-arvutamine"/>
+		<opivaljundKoosneb rdf:resource="https://schema.edu.ee/oskused/rombi-pindala-arvutamine"/>
+        <rdfs:label xml:lang="et">Nelinurga pindala arvutamine</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/ruudu-pindala-arvutamine">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Pindala"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Ruut"/>
+        <rdfs:label xml:lang="et">Ruudu pindala arvutamine</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/ristkuliku-pindala-arvutamine">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Pindala"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Ristk%C3%BClik"/>
+        <rdfs:label xml:lang="et">Ristküliku pindala arvutamine</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/roopkuliku-pindala-arvutamine">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Pindala"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/R%C3%B6%C3%B6pk%C3%BClik"/>
+        <rdfs:label xml:lang="et">Rööpküliku pindala arvutamine</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/rombi-pindala-arvutamine">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Pindala"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Romb"/>
+        <rdfs:label xml:lang="et">Rombi pindala arvutamine</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/ringi-pindala-arvutamine">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Pindala"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Ring"/>
+        <rdfs:label xml:lang="et">Ringi pindala arvutamine</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oskused/kolmnurga-pindala-arvutamine">
+        <rdf:type rdf:resource="https://schema.edu.ee/opivaljund/Oskus"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Pindala"/>
+		<opivaljundEeldab rdf:resource="https://et.wikipedia.org/wiki/Kolmnurk"/>		
+        <rdfs:label xml:lang="et">Kolmnurga pindala arvutamine</rdfs:label>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
