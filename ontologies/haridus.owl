@@ -6,18 +6,325 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:schema="https://schema.edu.ee/">
+     xmlns:schema="https://schema.edu.ee/"
+     xmlns:oskused="https://schema.edu.ee/"
+     xmlns:padevused="https://schema.edu.ee/">
     <owl:Ontology rdf:about="https://schema.edu.ee/">
         <owl:versionIRI rdf:resource="https://schema.edu.ee/0.1/"/>
+        <owl:imports rdf:resource="https://schema.org/"/>
         <rdfs:comment xml:lang="et">Hariduse valdkonna ontoloogia.</rdfs:comment>
         <rdfs:comment xml:lang="en">Ontology for education area.</rdfs:comment>
-		<owl:imports rdf:resource="https://schema.edu.ee/oppekava/"/>
-		<owl:imports rdf:resource="https://schema.edu.ee/hindamine/"/>
-		<owl:imports rdf:resource="https://schema.edu.ee/oppematerjal/"/>
-		<owl:imports rdf:resource="https://schema.edu.ee/opivaljund/"/>
-		<owl:imports rdf:resource="https://schema.edu.ee/opirada/"/>
-		<owl:imports rdf:resource="https://schema.edu.ee/padevused/"/>
-		<owl:imports rdf:resource="https://schema.edu.ee/oskused/"/>
-		<owl:imports rdf:resource="https://schema.org/"/>
-    </owl:Ontology>    
+    </owl:Ontology>
+	
+	    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/opivaljundiOppeaine">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:label xml:lang="et">Õppeaine, mille raames õpiväljundit käsitletekse</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/opivaljundiTeema">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Teema"/>
+        <rdfs:label xml:lang="et">Teema, mille raames õpiväljundit käsitletakse</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/opivaljundiValdkond">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Ainevaldkond"/>
+        <rdfs:label xml:lang="et">Ainevaldkond, mille raames õpiväljundit käsitletakse</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/onEelduseks">
+        <owl:inverseOf rdf:resource="https://schema.edu.ee/opivaljundEeldab"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:label xml:lang="et">Õpiväljund on eelduseks</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/eeldab">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:comment xml:lang="et">Õpiväljundi omandamiseks on vajalik teine õpiväljund, nt oskuse jaoks on vajalik teadmine.</rdfs:comment>
+        <rdfs:label xml:lang="et">Õpiväljundi eeldus</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppematerjaliOpivaljund">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Oppematerjal"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:label xml:lang="et">Õppematerjali õpiväljund</rdfs:label>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/ulesanneKoosneb">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Ulesanne"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Kusimus"/>
+        <rdfs:label xml:lang="et">Ülesanne koosneb üksikküsimustest</rdfs:label>
+    </owl:ObjectProperty>    
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/ainevaldkondKoosneb">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Ainevaldkond"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:label xml:lang="et">Ainevaldkond sisaldab õppeainet</rdfs:label>
+        <rdfs:label xml:lang="en">Includes subject</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/alateema">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Teema"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Teema"/>
+        <rdfs:comment xml:lang="et">Teema alamosa, a&apos;la &quot;Tasandilised kujundid&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="et">Alateema</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/hindabOpitulemust">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Test"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Opitulemus"/>
+        <rdfs:comment xml:lang="et">Ülesanne hindab mil määral on õpitulemus omandatud. Küsimus hindab kas konkreetse küsimusega seotud õpitulemus on saavutatud või mitte.</rdfs:comment>
+        <rdfs:label xml:lang="et">Hindab õpitulemuse saavutatust</rdfs:label>
+    </owl:ObjectProperty>
+        
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/testKoosneb">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Test"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Ulesanne"/>
+        <rdfs:label xml:lang="et">Test koosneb ülesannetest</rdfs:label>
+    </owl:ObjectProperty>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class rdf:about="https://schema.edu.ee/Kontrolltoo">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Test"/>
+        <rdfs:comment xml:lang="et">Õppepäevas võib läbi viia ühe kontrolltöö. Kontrolltöö toimumise ajast teatatakse õpilastele vähemalt viis õppepäeva enne kontrolltöö toimumist. Õppenädalas võib läbi viia kuni kolm kontrolltööd.
+
+Kontrolltöid ei planeerita esmaspäevale ja reedele, samuti õppepäeva esimesele ning viimasele õppetunnile, v.a juhul, kui õppeaine on tunniplaanis esmaspäeval ja reedel või ainult ühel neist päevadest või esimese või viimase tunnina.
+
+Formaalne definitsioon puudub. Vt https://www.eesti.ee/et/haridus-ja-teadus/ueldharidus/koolidele-kehtestatud-uehtsed-normid/</rdfs:comment>
+        <rdfs:label xml:lang="et">Kontrolltöö</rdfs:label>
+    </owl:Class>
+        
+    <owl:Class rdf:about="https://schema.edu.ee/Tasemetoo">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Test"/>
+        <rdfs:comment xml:lang="et">Kokkuvõttev test, kokkulepitud astme (kooliastme) lõpus saavutatud oskused ja teadmised; kooliastme lõpus teadmiste ja oskuste omandatust kontrolliv üleriigiline töö.</rdfs:comment>
+        <rdfs:label xml:lang="et">Tasemetöö</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/Test">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppematerjal"/>
+        <rdfs:comment xml:lang="et">Hindamisvahend kokkulepitud eesmärgi hindamiseks. Nt ülesannete kogum; standardiseeritud ülesannete või küsimuste kogum, millega uuritakse ja hinnatakse inimese võimeid ja omadusi või teadmisi ja oskusi.</rdfs:comment>
+        <rdfs:label xml:lang="en">Test</rdfs:label>
+        <rdfs:label xml:lang="et">Test</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/Tunnikontroll">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Test"/>
+        <rdfs:comment xml:lang="et">Väikesemahuline kirjalik töö tunnis õpitu kontrollimiseks ja hindamiseks.</rdfs:comment>
+        <rdfs:label xml:lang="et">Tunnikontroll</rdfs:label>
+    </owl:Class>
+            
+    <owl:Class rdf:about="https://schema.edu.ee/Opitulemus">
+        <rdfs:comment xml:lang="et">Kellegi teadmistele, oskustele, võimetele, töötulemustele antud hinnang, mida väljendatakse numbrites, tähtedes, punktides vm hindamisühikutes. Lihtsustatult, õpitulemus esitab õpiväljundi saavutatuse taset. Eksami või arvestuse sooritus.</rdfs:comment>
+        <rdfs:label xml:lang="en">Learning assessment</rdfs:label>
+        <rdfs:label xml:lang="et">Õpitulemus</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/Sihtgrupp">
+        <rdfs:comment xml:lang="et">Elanikkonna rühm, mille vajadusi silmas pidades on õppematerjal loodud.</rdfs:comment>
+        <rdfs:label xml:lang="en">Educational audience</rdfs:label>
+        <rdfs:label xml:lang="et">Sihtgrupp</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/Oppematerjal">
+        <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="et">Nii digitaalsel kui muul kujul õppematerjal. Digitaalsel kujul avaldatud õppematerjal on nt: e-õpik, õpiotstarbeline veebivideo ja mobiilirakendus, õpimäng, e-tööleht, veebipõhine test, õpiobjekt.</rdfs:comment>
+        <rdfs:label xml:lang="en">Learning material</rdfs:label>
+        <rdfs:label xml:lang="et">Õppematerjal</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/Ulesanne">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppematerjal"/>
+        <rdfs:comment xml:lang="et">Kohustusena antud töö; harjutustöö koolis. Ülesanne koosneb tööjuhendist, (üksik)küsimustest ja vastustest. Kasutusel ka hindamisvahendina.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ülesanne</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/Ainekava">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppekava"/>
+        <rdfs:comment xml:lang="et">Dokument, mis hõlmab ühe aine õppe-eesmärgid, õppesisu, metoodika ja hindamise põhimõtted.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ainekava</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/Ainevaldkond">
+        <owl:disjointWith rdf:resource="https://schema.edu.ee/Eesmark"/>
+        <owl:disjointWith rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:comment xml:lang="et">Lähedase eesmärgiseade ja õppesisuga õppeained moodustavad ainevaldkonna. Ainevaldkonnad on järgmised:
+  1) keel ja kirjandus;
+  2) võõrkeeled;
+  3) matemaatika;
+  4) loodusained;
+  5) sotsiaalained;
+  6) kunstiained;
+  7) kehaline kasvatus.
+
+Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädevuse kujundamine. Valdkonnapädevuste kujunemist ning gümnaasiumi õppe- ja kasvatuseesmärkide saavutamist toetavad ainekavades esitatud õpitulemused, lõiming teiste ainevaldkondade õppeainetega ning tunni- ja kooliväline tegevus.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ainevaldkond</rdfs:label>
+        <rdfs:label xml:lang="en">Subject area</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/AinevaldkonnaPadevus">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:label xml:lang="et">Ainevaldkonna pädevus</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/IndividuaalneOppekava">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Ainekava"/>
+        <rdfs:comment xml:lang="et">Individuaalne õppekava on Individuaalse õppekava järgi õppimise korra kohaselt hariduslike erivajadustega õpilase jaoks koostatud õppekava, mis loob õpilasele tingimused võimetekohaseks õppimiseks ja arenemiseks.
+
+Individuaalne õppekava koostatakse õpilasele, kellel on raskusi oma klassikaaslastega samal ajal samas ruumis või vastavale klassile koostatud töökava alusel töötada. Hariduslikeks erivajadusteks võivad olla õpilase eriline andekus, õpi- ja käitumisraskused, terviserikked, puuded või pikemaaegne õpikeskkonnast eemal viibimine.
+
+Vt https://et.wikipedia.org/wiki/Individuaalne_%C3%B5ppekava</rdfs:comment>
+        <rdfs:label xml:lang="et">Individuaalne õppekava</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/Koolitus">
+        <rdfs:comment xml:lang="et">Kavandatud süsteemne õpe, mille käigus antakse edasi kindlaid oskusi, teadmisi ja infot ning kujundatakse hoiakuid ja suhtumisi.</rdfs:comment>
+        <rdfs:label xml:lang="et">Koolitus</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/OpetajaTookava">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppekava"/>
+        <rdfs:comment xml:lang="et">Töökava on õpetajale igapäevane abivahend, mis võimaldab tal õppeprotsessi kavandada ja analüüsida ning iseennast hinnata. Töökava on dokument, mille alusel toimub õppetöö tundides.</rdfs:comment>
+        <rdfs:label xml:lang="et">Õpetaja töökava</rdfs:label>
+    </owl:Class>
+   
+    <owl:Class rdf:about="https://schema.edu.ee/Oppeaine">
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:label xml:lang="et">Õppeaine</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/OppeasutuseOppekava">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppekava"/>
+        <rdfs:comment xml:lang="et">Õppeasutuse õppekava on õppe- ja kasvatustegevuse alusdokument, milles kirjeldatakse õppe rõhuasetused ja tegevused õppekava täitmiseks.</rdfs:comment>
+        <rdfs:label xml:lang="et">Õppeasutuse õppekava</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/Oppekava">
+        <rdfs:comment xml:lang="et">Õppe ja kasvatuse alusdokument, mis määrab õppe- ja kasvatuseesmärgid, õppe sisu ja mahu, metoodika põhimõtted ning hindamise alused, nõuded õppekeskkonnale vms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Curriculum</rdfs:label>
+        <rdfs:label xml:lang="et">Õppekava</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/RiiklikOppekava">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppekava"/>
+        <rdfs:label xml:lang="en">National curriculum</rdfs:label>
+        <rdfs:label xml:lang="et">Riiklik õppekava</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/Teema">
+        <rdfs:comment xml:lang="et">Aine sisuühik, mida õpetatakse a&apos;la &quot;2. maailmasõda ajaloos&quot; või &quot;Geomeetria&quot;. Teemad on kasutusel õppematerjalide lõimimiseks.</rdfs:comment>
+        <rdfs:label xml:lang="et">Teema</rdfs:label>
+        <rdfs:label xml:lang="en">Topic</rdfs:label>
+    </owl:Class>
+    
+    <!-- https://schema.edu.ee/Hoiak -->
+
+    <owl:Class rdf:about="https://schema.edu.ee/Hoiak">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <owl:disjointWith rdf:resource="https://schema.edu.ee/Oskus"/>
+        <owl:disjointWith rdf:resource="https://schema.edu.ee/Teadmine"/>
+        <rdfs:label xml:lang="en">Attitude</rdfs:label>
+        <rdfs:label xml:lang="et">Hoiak</rdfs:label>
+    </owl:Class>
+    
+    <!-- https://schema.edu.ee/Opivaljund -->
+
+    <owl:Class rdf:about="https://schema.edu.ee/Opivaljund">
+        <rdfs:comment xml:lang="et">Õppimise tulemusena omandatavad teadmised, oskused ja hoiakud või nende kogumid (pädevused), mille olemasolu ja/või saavutatuse taset on võimalik tõendada ja hinnata. Nt &quot;oskab liita 10 piires&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">Learning outcome</rdfs:label>
+        <rdfs:label xml:lang="et">Õpiväljund</rdfs:label>
+    </owl:Class>
+
+    <!-- https://schema.edu.ee/Oskus -->
+
+    <owl:Class rdf:about="https://schema.edu.ee/Oskus">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <owl:disjointWith rdf:resource="https://schema.edu.ee/Teadmine"/>
+        <rdfs:comment xml:lang="et">Võime rakendada teadmisi ja kasutada neid ülesannete täitmisel ja probleemide lahendamisel.</rdfs:comment>
+        <rdfs:label xml:lang="et">Oskus</rdfs:label>
+        <rdfs:label xml:lang="en">Skill</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="https://schema.edu.ee/Padevus">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:comment xml:lang="et">Teadmiste, oskuste ja hoiakute kogum, mis tagab suutlikkuse teatud tegevusalal või -valdkonnas loovalt, ettevõtlikult ja paindlikult toimida.</rdfs:comment>
+        <rdfs:label xml:lang="en">Competence</rdfs:label>
+        <rdfs:label xml:lang="et">Pädevus</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/Teadmine">
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:comment xml:lang="et">Õpingutega või kogemustest omandatud faktide, reeglite, seaduspärasuste jms tundmine.</rdfs:comment>
+        <rdfs:label xml:lang="en">Knowledge</rdfs:label>
+        <rdfs:label xml:lang="et">Teadmine</rdfs:label>
+    </owl:Class>
+	
+	<owl:Class rdf:about="https://schema.edu.ee/Opirada">
+        <rdfs:comment xml:lang="et">Õppija poolt läbitud tee, mis sisaldab (e-)õppe tegevusi, mis võimaldavad teadmiste, oskuste ja pädevuste järjepidevat omandamist.</rdfs:comment>
+        <rdfs:label xml:lang="et">Õpirada</rdfs:label>
+    </owl:Class>
+
+	<owl:Class rdf:about="https://schema.edu.ee/Kusimus">
+        <rdfs:comment xml:lang="et">Üksikküsimus testis.</rdfs:comment>
+        <rdfs:label xml:lang="et">Küsimus</rdfs:label>
+    </owl:Class>
+	
+	<owl:Class rdf:about="https://schema.edu.ee/Vastus">
+        <rdfs:comment xml:lang="et">Üksikküsimuse vastus testis.</rdfs:comment>
+        <rdfs:label xml:lang="et">Vastus</rdfs:label>
+    </owl:Class>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:DatatypeProperty rdf:about="https://schema.edu.ee/haridusaste">
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="et">Hariduse omandamise järjestikune osa, selle iga (järgnev) osa (nt põhiharidus, keskharidus, kõrgharidus).</rdfs:comment>
+        <rdfs:label xml:lang="et">Haridusaste</rdfs:label>
+    </owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="https://schema.edu.ee/kooliaste">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="et">Hariduse omandamise järjestikune alajaotus, selle iga (järgnev) osa.
+
+Kooliastmed on:
+1) I kooliaste – 1.–3. klass;
+2) II kooliaste – 4.–6. klass;
+3) III kooliaste – 7.–9. klass;
+4) gümnaasium – 10.–12. klass.
+
+Põhikooli kooliastmed on:
+1) I kooliaste – 1.–3. klass;
+2) II kooliaste – 4.–6. klass;
+3) III kooliaste – 7.–9. klass.</rdfs:comment>
+        <rdfs:label xml:lang="et">Kooliaste</rdfs:label>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="https://schema.edu.ee/vanuseaste">
+        <rdfs:label xml:lang="et">Vanuseaste</rdfs:label>
+    </owl:DatatypeProperty>
 </rdf:RDF>
