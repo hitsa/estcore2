@@ -13,16 +13,16 @@
      xmlns:schema="https://schema.org/">
 	 
     <owl:Ontology rdf:about="https://schema.edu.ee/">
-        <vann:preferredNamespacePrefix="haridus"/>
-        <dcterms:isVersionOf="https://schema.edu.ee/"/>
-        <dcterms:identifier="https://schema.edu.ee/0.1/"/>
+        <vann:preferredNamespacePrefix xml:lang="et">haridus</vann:preferredNamespacePrefix>
+        <dcterms:isVersionOf rdf:resource="https://schema.edu.ee/"/>
+        <dcterms:identifier rdf:resource="https://schema.edu.ee/0.1/"/>
         <owl:versionIRI rdf:resource="https://schema.edu.ee/0.1/"/>
         <owl:versionInfo>0.1</owl:versionInfo>
         <owl:imports rdf:resource="https://schema.org/"/>
         <rdfs:comment xml:lang="et">Hariduse valdkonna ontoloogia.</rdfs:comment>
 		<dcterms:description xml:lang="et">Hariduse valdkonna ontoloogia.</dcterms:description>
         <rdfs:comment xml:lang="en">Ontology for education area.</rdfs:comment>
-        <dcterms:modified rdf:datatype="&xsd;date">2020-02-14</dcterms:modified>
+        <dcterms:modified rdf:datatype="xsd:date">2020-02-14</dcterms:modified>
         <dcterms:rights xml:lang="en">Copyright (c) 2020 Hariduse Infotehnoloogia SA (HITSA).</dcterms:rights>
 		<foaf:maker rdf:resource="https://www.linkedin.com/in/peepkungas"/>
         <dcterms:creator rdf:resource="https://www.linkedin.com/in/peepkungas"/>
