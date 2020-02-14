@@ -6,14 +6,62 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:schema="https://schema.edu.ee/"
-     xmlns:oskused="https://schema.edu.ee/"
-     xmlns:padevused="https://schema.edu.ee/">
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	 xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:schema="https://schema.org/">
+	 
     <owl:Ontology rdf:about="https://schema.edu.ee/">
+        <vann:preferredNamespacePrefix="haridus"/>
+        <dcterms:isVersionOf="https://schema.edu.ee/"/>
+        <dcterms:identifier="https://schema.edu.ee/0.1/"/>
         <owl:versionIRI rdf:resource="https://schema.edu.ee/0.1/"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
         <owl:imports rdf:resource="https://schema.org/"/>
         <rdfs:comment xml:lang="et">Hariduse valdkonna ontoloogia.</rdfs:comment>
+		<dcterms:description xml:lang="et">Hariduse valdkonna ontoloogia.</dcterms:description>
         <rdfs:comment xml:lang="en">Ontology for education area.</rdfs:comment>
+        <dcterms:modified rdf:datatype="&xsd;date">2020-02-14</dcterms:modified>
+        <dcterms:rights xml:lang="en">Copyright (c) 2020 Hariduse Infotehnoloogia SA (HITSA).</dcterms:rights>
+		<foaf:maker rdf:resource="https://www.linkedin.com/in/peepkungas"/>
+        <dcterms:creator rdf:resource="https://www.linkedin.com/in/peepkungas"/>
+	  <dcterms:hasFormat>
+    <rdf:Description rdf:about="http://rdfs.co/bevon/0.6/html">
+      <dcterms:format>
+        <dcterms:MediaType>
+          <rdf:value>text/html</rdf:value>
+          <rdfs:label xml:lang="en">HTML</rdfs:label>
+          <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+        </dcterms:MediaType>
+      </dcterms:format>
+    </rdf:Description>
+  </dcterms:hasFormat>
+
+  <dcterms:hasFormat>
+    <rdf:Description rdf:about="http://rdfs.co/bevon/0.6/rdf">
+      <dcterms:format>
+        <dcterms:MediaType>
+          <rdf:value>application/rdf+xml</rdf:value>
+          <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+          <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/application/rdf+xml"/>
+        </dcterms:MediaType>
+      </dcterms:format>
+    </rdf:Description>
+  </dcterms:hasFormat>
+
+  <dcterms:hasFormat>
+    <rdf:Description rdf:about="http://rdfs.co/bevon/0.6/ttl">
+      <dcterms:format>
+        <dcterms:MediaType>
+          <rdf:value>text/turtle</rdf:value>
+          <rdfs:label xml:lang="en">Turtle</rdfs:label>
+          <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/text/turtle"/>
+        </dcterms:MediaType>
+      </dcterms:format>
+    </rdf:Description>
+  </dcterms:hasFormat>
+  
     </owl:Ontology>
 	
 	    <!-- 
