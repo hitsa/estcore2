@@ -15,11 +15,11 @@
 	 
     <owl:Ontology rdf:about="https://schema.edu.ee/">
         <vann:preferredNamespacePrefix>haridus</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://schema.edu.ee/0.1/</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://schema.edu.ee/0.1/</vann:preferredNamespaceUri>
         <dcterms:isVersionOf rdf:resource="https://schema.edu.ee/"/>
         <dcterms:identifier rdf:resource="https://schema.edu.ee/0.1/"/>
 		<dcterms:description xml:lang="et">Ontoloogia kirjeldab hariduse valdkonna peamised mõisted ja seosed nende vahel. Praeguses versioonis on rõhk pandud õppematerjali, õpiväljundite ja õppekavaga seotud detailidele.</dcterms:description>
-		<dcterms:title xml:lang="et">Hariduse valdkonna ontoloogia.</dcterms:description>
+		<dcterms:title xml:lang="et">Hariduse valdkonna ontoloogia.</dcterms:title>
         <dcterms:modified rdf:datatype="xsd:date">2020-02-14</dcterms:modified>
         <dcterms:issued rdf:datatype="xsd:date">2020-02-14</dcterms:issued>
         <dcterms:rights xml:lang="en">Copyright (c) 2020 Hariduse Infotehnoloogia SA (HITSA).</dcterms:rights>
@@ -29,7 +29,7 @@
         <owl:versionIRI rdf:resource="https://schema.edu.ee/0.1/"/>
         <owl:versionInfo>0.1</owl:versionInfo>
         <owl:imports rdf:resource="https://schema.org/"/>
-        <rdfs:title xml:lang="et">Hariduse valdkonna ontoloogia.</rdfs:comment>
+        <rdfs:title xml:lang="et">Hariduse valdkonna ontoloogia.</rdfs:title>
         <rdfs:comment xml:lang="et">Ontoloogia kirjeldab hariduse valdkonna peamised mõisted ja seosed nende vahel. Praeguses versioonis on rõhk pandud õppematerjali, õpiväljundite ja õppekavaga seotud detailidele.</rdfs:comment>
         <rdfs:comment xml:lang="en">Ontology for education area.</rdfs:comment>
 		<foaf:maker rdf:resource="https://www.linkedin.com/in/peepkungas"/>
