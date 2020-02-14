@@ -191,7 +191,13 @@
     <owl:Class rdf:about="https://schema.edu.ee/Kontrolltoo">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
-		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee"/>
+		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+		
+        <skos:notation>Kontrolltöö</skos:notation>
+        <skos:prefLabel xml:lang="et">Kontrolltöö</skos:prefLabel>
+        <skos:definition xml:lang="et">Õppepäevas võib läbi viia ühe kontrolltöö. Kontrolltöö toimumise ajast teatatakse õpilastele vähemalt viis õppepäeva enne kontrolltöö toimumist. Õppenädalas võib läbi viia kuni kolm kontrolltööd.</skos:definition>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+
         <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Test"/>
         <rdfs:comment xml:lang="et">Õppepäevas võib läbi viia ühe kontrolltöö. Kontrolltöö toimumise ajast teatatakse õpilastele vähemalt viis õppepäeva enne kontrolltöö toimumist. Õppenädalas võib läbi viia kuni kolm kontrolltööd.
 
