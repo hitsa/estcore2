@@ -2,6 +2,6 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="https://schema.org/" uri="file:/C:/Users/peepk/Dropbox/My/Professional/HITSA/estcore2/import/schema.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1581619607393" name="https://schema.edu.ee/" uri="haridus.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1581684217543" name="https://schema.edu.ee/" uri="haridus.owl"/>
     </group>
 </catalog>
