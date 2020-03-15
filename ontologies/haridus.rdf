@@ -70,37 +70,95 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/opivaljundiOppeaine">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/seotudOppeaine">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
+		<rdfs:domain>
+			<owl:Class>    
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#Opivaljund"/>
+					<owl:Class rdf:about="#Oppematerjal"/>
+				</owl:unionOf>
+			</owl:Class>    
+		</rdfs:domain>
         <rdfs:range rdf:resource="https://schema.edu.ee/Oppeaine"/>
-        <rdfs:label xml:lang="et">Õppeaine, mille raames õpiväljundit käsitletekse</rdfs:label>
+        <rdfs:label xml:lang="et">Õppeaine, mille raames õpiväljundit või teemat käsitletekse</rdfs:label>
 		<rdfs:comment xml:lang="et">Õpiväljund ei pea olema seotud ühegi õppeainega ja võib olla seotud mitme õppeainega.</rdfs:comment>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/opivaljundiTeema">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/seotudTeema">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
+		<rdfs:domain>
+			<owl:Class>    
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#Opivaljund"/>
+					<owl:Class rdf:about="#Oppematerjal"/>
+				</owl:unionOf>
+			</owl:Class>    
+		</rdfs:domain>
         <rdfs:range rdf:resource="https://schema.edu.ee/Teema"/>
-        <rdfs:label xml:lang="et">Teema, mille raames õpiväljundit käsitletakse</rdfs:label>
-		<rdfs:comment xml:lang="et">Õpiväljund ei pea olema ühegi teemaga, kuid teema raames käsitletakse vähemalt ühte õpiväljundit.</rdfs:comment>
+        <rdfs:label xml:lang="et">Teema, mille raames õpiväljundit või teemat käsitletakse</rdfs:label>
+		<rdfs:comment xml:lang="et">Õpiväljund ei pea olema ühegi teemaga, kuid teema raames käsitletakse vähemalt ühte õpiväljundit. Õppematerjal võib olla seotud teemadega.</rdfs:comment>
 	</owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/opivaljundiValdkond">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/seotudAinevaldkond">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
+		<rdfs:domain>
+			<owl:Class>    
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#Opivaljund"/>
+					<owl:Class rdf:about="#Oppematerjal"/>
+				</owl:unionOf>
+			</owl:Class>    
+		</rdfs:domain>
         <rdfs:range rdf:resource="https://schema.edu.ee/Ainevaldkond"/>
-        <rdfs:label xml:lang="et">Ainevaldkond, mille raames õpiväljundit käsitletakse</rdfs:label>
-		<rdfs:comment xml:lang="et">Õpiväljundit võidakse kasutada erinevates ainevaldkondades riikliku õppekava kontekstis. Õpiväljund ei pea olema seotud ainevaldkonnaga.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ainevaldkond, mille raames õpiväljundit või õppematerjali käsitletakse</rdfs:label>
+		<rdfs:comment xml:lang="et">Õpiväljundit võidakse kasutada erinevates ainevaldkondades riikliku õppekava kontekstis. Õpiväljund ei pea olema seotud ainevaldkonnaga. Õppematerjal võib olla seotud ainevaldkondadega.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/seotudOpivaljund">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
+		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+		<rdfs:domain>
+			<owl:Class>    
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#Opivaljund"/>
+					<owl:Class rdf:about="#Oppematerjal"/>
+				</owl:unionOf>
+			</owl:Class>    
+		</rdfs:domain>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:label xml:lang="et">Teemaga või õppematerjaliga seotud õpiväljund</rdfs:label>
+		<rdfs:comment xml:lang="et">Õpiväljundit võidakse kasutada erinevates ainevaldkondades riikliku õppekava kontekstis. Õpiväljund ei pea olema seotud ainevaldkonnaga. Õppematerjal on seotud konkreetsete õpiväljundite saavutamisega. Minimaalselt on õppematerjaliga seotud üks õpiväljund.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/seotudHaridusaste">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:issued>
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:modified>
+		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+		<rdfs:domain>
+			<owl:Class>    
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="#Opivaljund"/>
+					<owl:Class rdf:about="#Oppematerjal"/>
+				</owl:unionOf>
+			</owl:Class>    
+		</rdfs:domain>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Haridusaste"/>
+		<rdfs:subPropertyOf rdf:resource="https://schema.org/educationalAlignment"/>
+        <rdfs:label xml:lang="et">Õppematerjali või õpiväljundiga seotud haridusaste</rdfs:label>
+        <rdfs:comment xml:lang="et">Õppematerjal on mõeldud või õpiväljund on planeeritud konkreetsele haridusastmele.</rdfs:comment>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/onEelduseks">
@@ -124,54 +182,6 @@
         <rdfs:range rdf:resource="https://schema.edu.ee/Opivaljund"/>
         <rdfs:comment xml:lang="et">Õpiväljundi omandamiseks on vajalik teine õpiväljund, nt oskuse jaoks on vajalik teadmine.</rdfs:comment>
         <rdfs:label xml:lang="et">Õpiväljundi eeldus</rdfs:label>
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppematerjaliOpivaljund">
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
-		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
-		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
-        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Oppematerjal"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Opivaljund"/>
-		<rdfs:subPropertyOf rdf:resource="https://schema.org/educationalAlignment"/>
-        <rdfs:label xml:lang="et">Õppematerjali õpiväljund</rdfs:label>
-        <rdfs:comment xml:lang="et">Õppematerjal on seotud konkreetsete õpiväljundite saavutamisega. Minimaalselt on õppematerjaliga seotud üks õpiväljund.</rdfs:comment>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppematerjaliTeema">
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:issued>
-		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:modified>
-		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
-        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Oppematerjal"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Teema"/>
-		<rdfs:subPropertyOf rdf:resource="https://schema.org/educationalAlignment"/>
-        <rdfs:label xml:lang="et">Õppematerjali teema</rdfs:label>
-        <rdfs:comment xml:lang="et">Õppematerjal võib olla seotud teemadega.</rdfs:comment>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppematerjaliAinevaldkond">
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:issued>
-		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:modified>
-		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
-        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Oppematerjal"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Ainevaldkond"/>
-		<rdfs:subPropertyOf rdf:resource="https://schema.org/educationalAlignment"/>
-        <rdfs:label xml:lang="et">Õppematerjali ainevaldkond</rdfs:label>
-        <rdfs:comment xml:lang="et">Õppematerjal võib olla seotud ainevaldkondadega.</rdfs:comment>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/oppematerjaliHaridusaste">
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:issued>
-		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:modified>
-		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
-        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Oppematerjal"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Haridusaste"/>
-		<rdfs:subPropertyOf rdf:resource="https://schema.org/educationalAlignment"/>
-        <rdfs:label xml:lang="et">Õppematerjali haridusaste</rdfs:label>
-        <rdfs:comment xml:lang="et">Õppematerjal on mõeldud konkreetsele haridusastmele.</rdfs:comment>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/ulesanneKoosneb">
