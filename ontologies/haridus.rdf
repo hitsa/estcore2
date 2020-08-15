@@ -12,7 +12,6 @@
     xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:status="http://www.w3.org/2003/06/sw-vocab-status/ns#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:org="http://www.w3.org/ns/org#">
 
@@ -50,7 +49,7 @@
             </rdf:Description>
         </dcterms:hasFormat>
         <dcterms:hasFormat>
-            <rdf:Description rdf:about="hhttps://schema.edu.ee/0.1/rdf">
+            <rdf:Description rdf:about="https://schema.edu.ee/0.1/rdf">
                 <dcterms:format>
                     <dcterms:MediaType>
                         <rdf:value>application/rdf+xml</rdf:value>
@@ -579,6 +578,15 @@ Põhikooli kooliastmed on:
 2) II kooliaste – 4.–6. klass;
 3) III kooliaste – 7.–9. klass.</rdfs:comment>
         <rdfs:label xml:lang="et">Kooliaste</rdfs:label>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="https://schema.edu.ee/klass">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-08-06</dcterms:issued>
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-08-06</dcterms:modified>
+		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="et">Klass</rdfs:label>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="https://schema.edu.ee/vanuseaste">

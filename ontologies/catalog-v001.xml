@@ -2,6 +2,11 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="https://schema.org/" uri="file:/C:/Users/peepk/Dropbox/My/Professional/HITSA/estcore2/import/schema.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1584296049475" name="https://schema.edu.ee/" uri="haridus.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1597335808284" name="https://schema.edu.ee/" uri="haridus.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1597335808284" name="https://schema.edu.ee/ainevaldkond" uri="ainevaldkond.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1597335808284" name="https://schema.edu.ee/haridusaste" uri="haridusaste.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1597335808284" name="https://schema.edu.ee/kooliaste" uri="kooliaste.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1597335808284" name="https://schema.edu.ee/oppeaine" uri="oppeaine.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1597335808284" name="https://schema.edu.ee/teema/eis" uri="eis_teema.rdf"/>
     </group>
 </catalog>

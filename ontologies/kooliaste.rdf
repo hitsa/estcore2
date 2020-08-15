@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY haridus "https://schema.edu.ee/" >
+    <!ENTITY schema "http://schema.org/" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY adms "http://www.w3.org/ns/adms#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<rdf:RDF xmlns="https://schema.edu.ee/kooliaste/"
+     xml:base="https://schema.edu.ee/kooliaste"
+     xmlns:haridus="https://schema.edu.ee/"
+     xmlns:schema="http://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:vann="http://purl.org/vocab/vann/"	 
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+    <owl:Ontology rdf:about="https://schema.edu.ee/kooliaste">
+        <vann:preferredNamespacePrefix>kooliaste</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://schema.edu.ee/kooliaste/</vann:preferredNamespaceUri>
+        <dcterms:isVersionOf rdf:resource="https://schema.edu.ee/kooliaste/"/>
+        <dcterms:identifier rdf:resource="https://schema.edu.ee/kooliaste"/>
+        <dcterms:description xml:lang="et">Riikliku õppekava taksonoomia kooliastemete loend.</dcterms:description>
+        <dcterms:title xml:lang="et">Kooliastmete loend</dcterms:title>
+        <dcterms:title xml:lang="en">...</dcterms:title>
+        <dcterms:modified rdf:datatype="xsd:date">2020-08-06</dcterms:modified>
+        <dcterms:issued rdf:datatype="xsd:date">2020-08-06</dcterms:issued>
+        <dcterms:rights xml:lang="en">Copyright (c) 2020 Hariduse Infotehnoloogia SA (HITSA).</dcterms:rights>
+        <dcterms:creator rdf:resource="https://www.linkedin.com/in/peepkungas"/>
+        <dcterms:type rdf:resource="http://purl.org/adms/assettype/Taxonomy"/>
+        <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <owl:versionIRI rdf:resource="https://schema.edu.ee/kooliaste/"/>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <owl:imports rdf:resource="https://schema.org/"/>
+        <rdfs:title xml:lang="et">Kooliastmete loend</rdfs:title>
+        <rdfs:title xml:lang="en">Kooliastmete loend</rdfs:title>
+        <rdfs:comment xml:lang="et">Riikliku õppekava taksonoomia kooliastemete loend.</rdfs:comment>
+        <foaf:maker rdf:resource="https://www.linkedin.com/in/peepkungas"/>
+        <dcterms:hasFormat>
+            <rdf:Description rdf:about="https://schema.edu.ee/kooliaste/html">
+                <dcterms:format>
+                    <dcterms:MediaType>
+                        <rdf:value>text/html</rdf:value>
+                        <rdfs:label xml:lang="en">HTML</rdfs:label>
+                        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+                    </dcterms:MediaType>
+                </dcterms:format>
+            </rdf:Description>
+        </dcterms:hasFormat>
+        <dcterms:hasFormat>
+            <rdf:Description rdf:about="https://schema.edu.ee/kooliaste/rdf">
+                <dcterms:format>
+                    <dcterms:MediaType>
+                        <rdf:value>application/rdf+xml</rdf:value>
+                        <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+                        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/application/rdf+xml"/>
+                    </dcterms:MediaType>
+                </dcterms:format>
+            </rdf:Description>
+        </dcterms:hasFormat>
+    </owl:Ontology>
+	
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    <owl:AnnotationProperty rdf:about="&skos;notation"/>
+    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    <owl:AnnotationProperty rdf:about="&skos;inScheme"/>
+    
+    <owl:Class rdf:about="&skos;Concept"/>
+
+    <owl:Class rdf:about="&skos;ConceptScheme"/>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/kooliaste/I">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>I</skos:notation>
+        <skos:prefLabel xml:lang="et">Esimene kooliaste</skos:prefLabel>
+        <rdfs:label xml:lang="et">Esimene kooliaste</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/kooliaste"/>
+        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/kooliaste/II">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>II</skos:notation>
+        <skos:prefLabel xml:lang="et">Teine kooliaste</skos:prefLabel>
+        <rdfs:label xml:lang="et">Teine kooliaste</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/kooliaste"/>
+        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/kooliaste/III">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>III</skos:notation>
+        <skos:prefLabel xml:lang="et">Kolmas kooliaste</skos:prefLabel>
+        <rdfs:label xml:lang="et">Kolmas kooliaste</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/kooliaste"/>
+        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/kooliaste/g">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>g</skos:notation>
+        <skos:prefLabel xml:lang="et">Gümnaasium</skos:prefLabel>
+        <rdfs:label xml:lang="et">Gümnaasium</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/kooliaste"/>
+        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/kooliaste">
+        <rdf:type rdf:resource="&skos;ConceptScheme"/>
+        <rdfs:label xml:lang="en">Kooliastmete loetelu</rdfs:label>
+    </owl:NamedIndividual>
+
+</rdf:RDF>

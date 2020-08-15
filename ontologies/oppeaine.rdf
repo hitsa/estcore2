@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY haridus "https://schema.edu.ee/" >
+    <!ENTITY schema "http://schema.org/" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY adms "http://www.w3.org/ns/adms#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<rdf:RDF xmlns="https://schema.edu.ee/oppeaine/"
+     xml:base="https://schema.edu.ee/oppeaine"
+     xmlns:haridus="https://schema.edu.ee/"
+     xmlns:schema="http://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:vann="http://purl.org/vocab/vann/"	 
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+    <owl:Ontology rdf:about="https://schema.edu.ee/oppeaine">
+        <vann:preferredNamespacePrefix>oppeaine</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://schema.edu.ee/oppeaine/</vann:preferredNamespaceUri>
+        <dcterms:isVersionOf rdf:resource="https://schema.edu.ee/oppeaine/"/>
+        <dcterms:identifier rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <dcterms:description xml:lang="et">Riikliku õppekava õppeained.</dcterms:description>
+        <dcterms:title xml:lang="et">Õppeaine loend</dcterms:title>
+        <dcterms:title xml:lang="en">Subjects</dcterms:title>
+        <dcterms:modified rdf:datatype="xsd:date">2020-08-07</dcterms:modified>
+        <dcterms:issued rdf:datatype="xsd:date">2020-08-07</dcterms:issued>
+        <dcterms:rights xml:lang="en">Copyright (c) 2020 Hariduse Infotehnoloogia SA (HITSA).</dcterms:rights>
+        <dcterms:creator rdf:resource="https://www.linkedin.com/in/peepkungas"/>
+        <dcterms:type rdf:resource="http://purl.org/adms/assettype/Taxonomy"/>
+        <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <owl:versionIRI rdf:resource="https://schema.edu.ee/oppeaine/"/>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <owl:imports rdf:resource="https://schema.org/"/>
+        <rdfs:title xml:lang="et">Õppeainete loend</rdfs:title>
+        <rdfs:title xml:lang="en">Subjects</rdfs:title>
+        <rdfs:comment xml:lang="et">Riikliku õppekava õppeained.</rdfs:comment>
+        <foaf:maker rdf:resource="https://www.linkedin.com/in/peepkungas"/>
+        <dcterms:hasFormat>
+            <rdf:Description rdf:about="https://schema.edu.ee/oppeaine/html">
+                <dcterms:format>
+                    <dcterms:MediaType>
+                        <rdf:value>text/html</rdf:value>
+                        <rdfs:label xml:lang="en">HTML</rdfs:label>
+                        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+                    </dcterms:MediaType>
+                </dcterms:format>
+            </rdf:Description>
+        </dcterms:hasFormat>
+        <dcterms:hasFormat>
+            <rdf:Description rdf:about="https://schema.edu.ee/oppeaine/rdf">
+                <dcterms:format>
+                    <dcterms:MediaType>
+                        <rdf:value>application/rdf+xml</rdf:value>
+                        <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+                        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/application/rdf+xml"/>
+                    </dcterms:MediaType>
+                </dcterms:format>
+            </rdf:Description>
+        </dcterms:hasFormat>
+    </owl:Ontology>
+	
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    <owl:AnnotationProperty rdf:about="&skos;notation"/>
+    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    <owl:AnnotationProperty rdf:about="&skos;inScheme"/>
+    
+    <owl:Class rdf:about="&skos;Concept"/>
+    <owl:Class rdf:about="&skos;ConceptScheme"/>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/E">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>E</skos:notation>
+        <skos:prefLabel xml:lang="et">Eesti keel</skos:prefLabel>
+        <rdfs:label xml:lang="et">Eesti keel</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/keel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/W">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>W</skos:notation>
+        <skos:prefLabel xml:lang="et">Vene keel</skos:prefLabel>
+        <rdfs:label xml:lang="et">Vene keel</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/keel"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/I">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>I</skos:notation>
+        <skos:prefLabel xml:lang="et">Inglise keel (võõrkeel)</skos:prefLabel>
+        <rdfs:label xml:lang="et">Inglise keel (võõrkeel)</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/S">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>S</skos:notation>
+        <skos:prefLabel xml:lang="et">Saksa keel (võõrkeel)</skos:prefLabel>
+        <rdfs:label xml:lang="et">Saksa keel (võõrkeel)</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/V">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>V</skos:notation>
+        <skos:prefLabel xml:lang="et">Vene keel (võõrkeel)</skos:prefLabel>
+        <rdfs:label xml:lang="et">Vene keel (võõrkeel)</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/P">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>P</skos:notation>
+        <skos:prefLabel xml:lang="et">Prantsuse keel (võõrkeel)</skos:prefLabel>
+        <rdfs:label xml:lang="et">Prantsuse keel (võõrkeel)</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/R">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>R</skos:notation>
+        <skos:prefLabel xml:lang="et">Eesti keel teise keelena</skos:prefLabel>
+        <rdfs:label xml:lang="et">Eesti keel teise keelena</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/M">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>M</skos:notation>
+        <skos:prefLabel xml:lang="et">Matemaatika</skos:prefLabel>
+        <rdfs:label xml:lang="et">Matemaatika</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/mat"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/lo">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>lo</skos:notation>
+        <skos:prefLabel xml:lang="et">Loodusõpetus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Loodusõpetus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/B">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>B</skos:notation>
+        <skos:prefLabel xml:lang="et">Bioloogia</skos:prefLabel>
+        <rdfs:label xml:lang="et">Bioloogia</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/G">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>G</skos:notation>
+        <skos:prefLabel xml:lang="et">Geograafia</skos:prefLabel>
+        <rdfs:label xml:lang="et">Geograafia</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/F">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>F</skos:notation>
+        <skos:prefLabel xml:lang="et">Füüsika</skos:prefLabel>
+        <rdfs:label xml:lang="et">Füüsika</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/K">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>K</skos:notation>
+        <skos:prefLabel xml:lang="et">Keemia</skos:prefLabel>
+        <rdfs:label xml:lang="et">Keemia</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/io">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>io</skos:notation>
+        <skos:prefLabel xml:lang="et">Inimeseõpetus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Inimeseõpetus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/sots"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/A">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>A</skos:notation>
+        <skos:prefLabel xml:lang="et">Ajalugu</skos:prefLabel>
+        <rdfs:label xml:lang="et">Ajalugu</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/sots"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/C">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>C</skos:notation>
+        <skos:prefLabel xml:lang="et">Ühiskonnaõpetus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Ühiskonnaõpetus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/sots"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/mu">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>mu</skos:notation>
+        <skos:prefLabel xml:lang="et">Muusika</skos:prefLabel>
+        <rdfs:label xml:lang="et">Muusika</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/knst"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/knst">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>knst</skos:notation>
+        <skos:prefLabel xml:lang="et">Kunst</skos:prefLabel>
+        <rdfs:label xml:lang="et">Kunst</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/knst"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/to">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>to</skos:notation>
+        <skos:prefLabel xml:lang="et">Tööõpetus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Tööõpetus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/x"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/kodu">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>kodu</skos:notation>
+        <skos:prefLabel xml:lang="et">Käsitöö ja kodundus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Käsitöö ja kodundus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/x"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/tehn">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>tehn</skos:notation>
+        <skos:prefLabel xml:lang="et">Tehnoloogiaõpetus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Tehnoloogiaõpetus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/tehn"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/kehk">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>kehk</skos:notation>
+        <skos:prefLabel xml:lang="et">Kehaline kasvatus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Kehaline kasvatus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/kehk"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/ki">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>ki</skos:notation>
+        <skos:prefLabel xml:lang="et">Kirjandus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Kirjandus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/keel"/>
+    </owl:NamedIndividual>
+			
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/Riik">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>Riik</skos:notation>
+        <skos:prefLabel xml:lang="et">Riigikaitse</skos:prefLabel>
+        <rdfs:label xml:lang="et">Riigikaitse</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/uo">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>uo</skos:notation>
+        <skos:prefLabel xml:lang="et">Usundiõpetus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Usundiõpetus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/maj">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>maj</skos:notation>
+        <skos:prefLabel xml:lang="et">Majandusõpetus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Majandusõpetus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
+    </owl:NamedIndividual>
+		
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/fi">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>fi</skos:notation>
+        <skos:prefLabel xml:lang="et">Soome keel</skos:prefLabel>
+        <rdfs:label xml:lang="et">Soome keel</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+    </owl:NamedIndividual>
+	
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/info">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>info</skos:notation>
+        <skos:prefLabel xml:lang="et">Informaatika</skos:prefLabel>
+        <rdfs:label xml:lang="et">Informaatika</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/yld">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>yld</skos:notation>
+        <skos:prefLabel xml:lang="et">Üldõpetus</skos:prefLabel>
+        <rdfs:label xml:lang="et">Üldõpetus</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/yle"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/cyber">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>cyber</skos:notation>
+        <skos:prefLabel xml:lang="et">Küberkaitse</skos:prefLabel>
+        <rdfs:label xml:lang="et">Küberkaitse</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/se">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>se</skos:notation>
+        <skos:prefLabel xml:lang="et">Rootsi keel</skos:prefLabel>
+        <rdfs:label xml:lang="et">Rootsi keel</rdfs:label>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
+        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine">
+        <rdf:type rdf:resource="&skos;ConceptScheme"/>
+        <rdfs:label xml:lang="en">Riikliku õppekava õppeainete loend</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
