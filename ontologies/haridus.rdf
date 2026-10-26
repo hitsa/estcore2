@@ -551,6 +551,35 @@ Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädev
         <rdfs:label xml:lang="et">Vastus</rdfs:label>
     </owl:Class>
 
+    <owl:Class rdf:about="https://schema.edu.ee/Occupation">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <owl:equivalentClass rdf:resource="https://schema.org/Occupation"/>
+        <rdfs:comment xml:lang="en">A job or profession: a set of tasks and duties that a person performs for a living.</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupation</rdfs:label>
+        <rdfs:label xml:lang="et">Amet</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/Activity">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:comment xml:lang="en">Something a person does, such as a work activity within an occupation or a learning activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+        <rdfs:label xml:lang="et">Tegevus</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/Knobit">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:label xml:lang="en">Knobit</rdfs:label>
+    </owl:Class>
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
