@@ -269,7 +269,9 @@
         <rdfs:domain rdf:resource="https://schema.edu.ee/LearningOutcome"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/Knobit"/>
         <rdfs:label xml:lang="en">includes knobit</rdfs:label>
+        <rdfs:label xml:lang="et">Sisaldab knobitit</rdfs:label>
         <rdfs:comment xml:lang="en">A knobit that is part of this learning outcome.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Seob õpiväljundi selle sisuks oleva väiksema teadmise, oskuse või hoiaku ühikuga.</rdfs:comment>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/requiresKnobit">
@@ -280,6 +282,7 @@
         <rdfs:domain rdf:resource="https://schema.edu.ee/Activity"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/Knobit"/>
         <rdfs:label xml:lang="en">requires knobit</rdfs:label>
+        <rdfs:label xml:lang="et">Eeldab knobitit</rdfs:label>
         <rdfs:comment xml:lang="en">A knobit that is needed to perform this activity.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -621,7 +624,10 @@ Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädev
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
         <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:comment xml:lang="et">Õppimist ja hindamist vääriv väikseim iseseisvat tähendust kandev teadmise, oskuse või hoiaku ühik, mida kasutatakse õpiväljundi või tegevusnäitaja sisulisteks osadeks lahutamiseks.</rdfs:comment>
         <rdfs:label xml:lang="en">Knobit</rdfs:label>
+        <rdfs:label xml:lang="et">Knobit</rdfs:label>
+        <skos:altLabel xml:lang="en">Atomic knowledge, skill or attitude unit</skos:altLabel>
     </owl:Class>
 
     <!-- 
