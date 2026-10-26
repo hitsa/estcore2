@@ -244,9 +244,10 @@
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
         <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Occupation"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/Competence"/>
         <rdfs:label xml:lang="en">requires competence</rdfs:label>
-        <rdfs:comment xml:lang="en">A competence that is needed for this, e.g. for an occupation or an activity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A competence that is needed to work in this occupation.</rdfs:comment>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/supportsActivity">
@@ -254,9 +255,10 @@
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
         <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Competence"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/Activity"/>
         <rdfs:label xml:lang="en">supports activity</rdfs:label>
-        <rdfs:comment xml:lang="en">An activity that this supports or makes possible.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An activity that this competence makes a person able to perform.</rdfs:comment>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/includesKnobit">
@@ -264,9 +266,10 @@
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
         <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/LearningOutcome"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/Knobit"/>
         <rdfs:label xml:lang="en">includes knobit</rdfs:label>
-        <rdfs:comment xml:lang="en">A knobit that is part of this.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A knobit that is part of this learning outcome.</rdfs:comment>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/requiresKnobit">
@@ -274,9 +277,10 @@
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
         <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Activity"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/Knobit"/>
         <rdfs:label xml:lang="en">requires knobit</rdfs:label>
-        <rdfs:comment xml:lang="en">A knobit that is needed for this.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A knobit that is needed to perform this activity.</rdfs:comment>
     </owl:ObjectProperty>
     
     <!-- 
