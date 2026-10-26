@@ -92,7 +92,7 @@
         <skos:prefLabel xml:lang="et">Eesti keel</skos:prefLabel>
         <rdfs:label xml:lang="et">Eesti keel</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/keel"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/keel"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/W">
@@ -101,7 +101,7 @@
         <skos:prefLabel xml:lang="et">Vene keel</skos:prefLabel>
         <rdfs:label xml:lang="et">Vene keel</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/keel"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/keel"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/I">
@@ -110,7 +110,7 @@
         <skos:prefLabel xml:lang="et">Inglise keel (võõrkeel)</skos:prefLabel>
         <rdfs:label xml:lang="et">Inglise keel (võõrkeel)</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/S">
@@ -119,7 +119,7 @@
         <skos:prefLabel xml:lang="et">Saksa keel (võõrkeel)</skos:prefLabel>
         <rdfs:label xml:lang="et">Saksa keel (võõrkeel)</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/V">
@@ -128,7 +128,7 @@
         <skos:prefLabel xml:lang="et">Vene keel (võõrkeel)</skos:prefLabel>
         <rdfs:label xml:lang="et">Vene keel (võõrkeel)</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/P">
@@ -137,7 +137,7 @@
         <skos:prefLabel xml:lang="et">Prantsuse keel (võõrkeel)</skos:prefLabel>
         <rdfs:label xml:lang="et">Prantsuse keel (võõrkeel)</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/R">
@@ -146,7 +146,7 @@
         <skos:prefLabel xml:lang="et">Eesti keel teise keelena</skos:prefLabel>
         <rdfs:label xml:lang="et">Eesti keel teise keelena</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/M">
@@ -155,7 +155,7 @@
         <skos:prefLabel xml:lang="et">Matemaatika</skos:prefLabel>
         <rdfs:label xml:lang="et">Matemaatika</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/mat"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/mat"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/lo">
@@ -164,7 +164,7 @@
         <skos:prefLabel xml:lang="et">Loodusõpetus</skos:prefLabel>
         <rdfs:label xml:lang="et">Loodusõpetus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/B">
@@ -173,7 +173,7 @@
         <skos:prefLabel xml:lang="et">Bioloogia</skos:prefLabel>
         <rdfs:label xml:lang="et">Bioloogia</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/G">
@@ -182,7 +182,7 @@
         <skos:prefLabel xml:lang="et">Geograafia</skos:prefLabel>
         <rdfs:label xml:lang="et">Geograafia</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/F">
@@ -191,7 +191,7 @@
         <skos:prefLabel xml:lang="et">Füüsika</skos:prefLabel>
         <rdfs:label xml:lang="et">Füüsika</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/K">
@@ -200,7 +200,7 @@
         <skos:prefLabel xml:lang="et">Keemia</skos:prefLabel>
         <rdfs:label xml:lang="et">Keemia</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/loodus"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/io">
@@ -209,7 +209,7 @@
         <skos:prefLabel xml:lang="et">Inimeseõpetus</skos:prefLabel>
         <rdfs:label xml:lang="et">Inimeseõpetus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/sots"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/sots"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/A">
@@ -218,7 +218,7 @@
         <skos:prefLabel xml:lang="et">Ajalugu</skos:prefLabel>
         <rdfs:label xml:lang="et">Ajalugu</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/sots"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/sots"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/C">
@@ -227,7 +227,7 @@
         <skos:prefLabel xml:lang="et">Ühiskonnaõpetus</skos:prefLabel>
         <rdfs:label xml:lang="et">Ühiskonnaõpetus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/sots"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/sots"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/mu">
@@ -236,7 +236,7 @@
         <skos:prefLabel xml:lang="et">Muusika</skos:prefLabel>
         <rdfs:label xml:lang="et">Muusika</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/knst"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/knst"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/knst">
@@ -245,7 +245,7 @@
         <skos:prefLabel xml:lang="et">Kunst</skos:prefLabel>
         <rdfs:label xml:lang="et">Kunst</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/knst"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/knst"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/to">
@@ -254,7 +254,7 @@
         <skos:prefLabel xml:lang="et">Tööõpetus</skos:prefLabel>
         <rdfs:label xml:lang="et">Tööõpetus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/x"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/x"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/kodu">
@@ -263,7 +263,7 @@
         <skos:prefLabel xml:lang="et">Käsitöö ja kodundus</skos:prefLabel>
         <rdfs:label xml:lang="et">Käsitöö ja kodundus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/x"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/x"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/tehn">
@@ -272,7 +272,7 @@
         <skos:prefLabel xml:lang="et">Tehnoloogiaõpetus</skos:prefLabel>
         <rdfs:label xml:lang="et">Tehnoloogiaõpetus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/tehn"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/tehn"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/kehk">
@@ -281,7 +281,7 @@
         <skos:prefLabel xml:lang="et">Kehaline kasvatus</skos:prefLabel>
         <rdfs:label xml:lang="et">Kehaline kasvatus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/kehk"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/kehk"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/ki">
@@ -290,7 +290,7 @@
         <skos:prefLabel xml:lang="et">Kirjandus</skos:prefLabel>
         <rdfs:label xml:lang="et">Kirjandus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/keel"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/keel"/>
     </owl:NamedIndividual>
 			
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/Riik">
@@ -299,7 +299,7 @@
         <skos:prefLabel xml:lang="et">Riigikaitse</skos:prefLabel>
         <rdfs:label xml:lang="et">Riigikaitse</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/uo">
@@ -308,7 +308,7 @@
         <skos:prefLabel xml:lang="et">Usundiõpetus</skos:prefLabel>
         <rdfs:label xml:lang="et">Usundiõpetus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/maj">
@@ -317,7 +317,7 @@
         <skos:prefLabel xml:lang="et">Majandusõpetus</skos:prefLabel>
         <rdfs:label xml:lang="et">Majandusõpetus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
     </owl:NamedIndividual>
 		
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/fi">
@@ -326,7 +326,7 @@
         <skos:prefLabel xml:lang="et">Soome keel</skos:prefLabel>
         <rdfs:label xml:lang="et">Soome keel</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
     </owl:NamedIndividual>
 	
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/info">
@@ -335,7 +335,7 @@
         <skos:prefLabel xml:lang="et">Informaatika</skos:prefLabel>
         <rdfs:label xml:lang="et">Informaatika</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/yld">
@@ -344,7 +344,7 @@
         <skos:prefLabel xml:lang="et">Üldõpetus</skos:prefLabel>
         <rdfs:label xml:lang="et">Üldõpetus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/yle"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/yle"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/cyber">
@@ -353,7 +353,7 @@
         <skos:prefLabel xml:lang="et">Küberkaitse</skos:prefLabel>
         <rdfs:label xml:lang="et">Küberkaitse</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/valik"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine/se">
@@ -362,7 +362,7 @@
         <skos:prefLabel xml:lang="et">Rootsi keel</skos:prefLabel>
         <rdfs:label xml:lang="et">Rootsi keel</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/oppeaine"/>
-        <haridus:seotudAinevaldkond rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
+        <haridus:relatedSubjectArea rdf:resource="https://schema.edu.ee/ainevaldkond/vrk"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/oppeaine">

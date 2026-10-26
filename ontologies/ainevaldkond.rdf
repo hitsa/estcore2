@@ -92,9 +92,9 @@
         <skos:prefLabel xml:lang="et">Matemaatika</skos:prefLabel>
         <rdfs:label xml:lang="et">Matemaatika</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/keel">
@@ -103,8 +103,8 @@
         <skos:prefLabel xml:lang="et">Keel ja kirjandus</skos:prefLabel>
         <rdfs:label xml:lang="et">Keel ja kirjandus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/vrk">
@@ -113,8 +113,8 @@
         <skos:prefLabel xml:lang="et">Võõrkeeled</skos:prefLabel>
         <rdfs:label xml:lang="et">Võõrkeeled</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/loodus">
@@ -123,8 +123,8 @@
         <skos:prefLabel xml:lang="et">Loodusained</skos:prefLabel>
         <rdfs:label xml:lang="et">Loodusained</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/sots">
@@ -133,8 +133,8 @@
         <skos:prefLabel xml:lang="et">Sotsiaalained</skos:prefLabel>
         <rdfs:label xml:lang="et">Sotsiaalained</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/knst">
@@ -143,8 +143,8 @@
         <skos:prefLabel xml:lang="et">Kunstiained</skos:prefLabel>
         <rdfs:label xml:lang="et">Kunstiained</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/tehn">
@@ -153,8 +153,8 @@
         <skos:prefLabel xml:lang="et">Tehnoloogia</skos:prefLabel>
         <rdfs:label xml:lang="et">Tehnoloogia</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/kehk">
@@ -163,8 +163,8 @@
         <skos:prefLabel xml:lang="et">Kehaline kasvatus</skos:prefLabel>
         <rdfs:label xml:lang="et">Kehaline kasvatus</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/valik">
@@ -189,7 +189,7 @@
         <skos:prefLabel xml:lang="et">Muusika</skos:prefLabel>
         <rdfs:label xml:lang="et">Muusika</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/alus:kunst">
@@ -198,7 +198,7 @@
         <skos:prefLabel xml:lang="et">Kunst</skos:prefLabel>
         <rdfs:label xml:lang="et">Kunst</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/alus:liikumine">
@@ -207,7 +207,7 @@
         <skos:prefLabel xml:lang="et">Liikumine</skos:prefLabel>
         <rdfs:label xml:lang="et">Liikumine</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/alus:mina">
@@ -216,7 +216,7 @@
         <skos:prefLabel xml:lang="et">Mina ja keskkond</skos:prefLabel>
         <rdfs:label xml:lang="et">Mina ja keskkond</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/alus:eesti_keel">
@@ -225,7 +225,7 @@
         <skos:prefLabel xml:lang="et">Eesti keel kui teine keel</skos:prefLabel>
         <rdfs:label xml:lang="et">Eesti keel kui teine keel</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond/alus:keel">
@@ -234,7 +234,7 @@
         <skos:prefLabel xml:lang="et">Keel ja kõne</skos:prefLabel>
         <rdfs:label xml:lang="et">Keel ja kõne</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/ainevaldkond"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Alusharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/ainevaldkond">

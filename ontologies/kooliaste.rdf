@@ -93,8 +93,8 @@
         <skos:prefLabel xml:lang="et">Esimene kooliaste</skos:prefLabel>
         <rdfs:label xml:lang="et">Esimene kooliaste</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/kooliaste"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/kooliaste/II">
@@ -103,8 +103,8 @@
         <skos:prefLabel xml:lang="et">Teine kooliaste</skos:prefLabel>
         <rdfs:label xml:lang="et">Teine kooliaste</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/kooliaste"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/kooliaste/III">
@@ -113,8 +113,8 @@
         <skos:prefLabel xml:lang="et">Kolmas kooliaste</skos:prefLabel>
         <rdfs:label xml:lang="et">Kolmas kooliaste</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/kooliaste"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Pohiharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/kooliaste/g">
@@ -123,7 +123,7 @@
         <skos:prefLabel xml:lang="et">Gümnaasium</skos:prefLabel>
         <rdfs:label xml:lang="et">Gümnaasium</rdfs:label>
         <skos:inScheme rdf:resource="https://schema.edu.ee/kooliaste"/>
-        <haridus:seotudHaridusaste rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
+        <haridus:relatedEducationLevel rdf:resource="https://schema.edu.ee/haridusaste/Keskharidus"/>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="https://schema.edu.ee/kooliaste">
