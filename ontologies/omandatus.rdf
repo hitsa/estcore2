@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY haridus "https://schema.edu.ee/" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<rdf:RDF xmlns="https://schema.edu.ee/omandatus/"
+     xml:base="https://schema.edu.ee/omandatus"
+     xmlns:haridus="https://schema.edu.ee/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+    <owl:Ontology rdf:about="https://schema.edu.ee/omandatus">
+        <vann:preferredNamespacePrefix>omandatus</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://schema.edu.ee/omandatus/</vann:preferredNamespaceUri>
+        <dcterms:isVersionOf rdf:resource="https://schema.edu.ee/omandatus/"/>
+        <dcterms:identifier rdf:resource="https://schema.edu.ee/omandatus"/>
+        <dcterms:description xml:lang="et">Õpiväljundi omandatuse olekud diagnostilise hindamise tulemuse kirjeldamiseks (omadus haridus:masteryStatus).</dcterms:description>
+        <dcterms:description xml:lang="en">Mastery statuses of a learning outcome, used to describe the result of a diagnostic assessment (property haridus:masteryStatus).</dcterms:description>
+        <dcterms:title xml:lang="et">Omandatuse olekute loend</dcterms:title>
+        <dcterms:title xml:lang="en">Mastery statuses</dcterms:title>
+        <dcterms:modified rdf:datatype="&xsd;date">2026-10-27</dcterms:modified>
+        <dcterms:issued rdf:datatype="&xsd;date">2026-10-27</dcterms:issued>
+        <dcterms:creator rdf:resource="https://www.linkedin.com/in/peepkungas"/>
+        <dcterms:type rdf:resource="http://purl.org/adms/assettype/Taxonomy"/>
+        <adms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <owl:versionIRI rdf:resource="https://schema.edu.ee/omandatus/"/>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <foaf:maker rdf:resource="https://www.linkedin.com/in/peepkungas"/>
+    </owl:Ontology>
+
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    <owl:AnnotationProperty rdf:about="&skos;notation"/>
+    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    <owl:AnnotationProperty rdf:about="&skos;inScheme"/>
+
+    <owl:Class rdf:about="&skos;Concept"/>
+
+    <owl:Class rdf:about="&skos;ConceptScheme"/>
+
+    <skos:ConceptScheme rdf:about="https://schema.edu.ee/omandatus">
+        <skos:prefLabel xml:lang="et">Omandatuse olekute loend</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Mastery statuses</skos:prefLabel>
+        <skos:hasTopConcept rdf:resource="https://schema.edu.ee/omandatus/mastered"/>
+        <skos:hasTopConcept rdf:resource="https://schema.edu.ee/omandatus/ready"/>
+        <skos:hasTopConcept rdf:resource="https://schema.edu.ee/omandatus/notYet"/>
+        <skos:hasTopConcept rdf:resource="https://schema.edu.ee/omandatus/uncertain"/>
+    </skos:ConceptScheme>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/omandatus/mastered">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>mastered</skos:notation>
+        <skos:prefLabel xml:lang="et">Omandatud</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Mastered</skos:prefLabel>
+        <skos:definition xml:lang="et">Õpiväljund on omandatud.</skos:definition>
+        <skos:definition xml:lang="en">The learning outcome has been mastered.</skos:definition>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/omandatus"/>
+        <skos:topConceptOf rdf:resource="https://schema.edu.ee/omandatus"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/omandatus/ready">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>ready</skos:notation>
+        <skos:prefLabel xml:lang="et">Valmis õppima</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Ready to learn</skos:prefLabel>
+        <skos:definition xml:lang="et">Õpiväljund ei ole omandatud, kuid kõik selle eeldused on omandatud, nii et seda saab õppida järgmisena.</skos:definition>
+        <skos:definition xml:lang="en">The learning outcome is not yet mastered, but all its prerequisites are, so it can be learned next.</skos:definition>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/omandatus"/>
+        <skos:topConceptOf rdf:resource="https://schema.edu.ee/omandatus"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/omandatus/notYet">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>notYet</skos:notation>
+        <skos:prefLabel xml:lang="et">Veel mitte</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Not yet</skos:prefLabel>
+        <skos:definition xml:lang="et">Õpiväljund ei ole omandatud ja mõni selle eeldus on samuti omandamata.</skos:definition>
+        <skos:definition xml:lang="en">The learning outcome is not mastered, and neither is at least one of its prerequisites.</skos:definition>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/omandatus"/>
+        <skos:topConceptOf rdf:resource="https://schema.edu.ee/omandatus"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://schema.edu.ee/omandatus/uncertain">
+        <rdf:type rdf:resource="&skos;Concept"/>
+        <skos:notation>uncertain</skos:notation>
+        <skos:prefLabel xml:lang="et">Ebaselge</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Uncertain</skos:prefLabel>
+        <skos:definition xml:lang="et">Olemasolevate vastuste põhjal ei saa omandatust kindlaks teha.</skos:definition>
+        <skos:definition xml:lang="en">Mastery cannot be determined from the answers available.</skos:definition>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/omandatus"/>
+        <skos:topConceptOf rdf:resource="https://schema.edu.ee/omandatus"/>
+    </owl:NamedIndividual>
+</rdf:RDF>

@@ -7,6 +7,7 @@
         <uri id="Automatically generated entry, Timestamp=1597335808284" name="https://schema.edu.ee/haridusaste" uri="haridusaste.rdf"/>
         <uri id="Automatically generated entry, Timestamp=1597335808284" name="https://schema.edu.ee/kooliaste" uri="kooliaste.rdf"/>
         <uri id="Automatically generated entry, Timestamp=1597335808284" name="https://schema.edu.ee/oppeaine" uri="oppeaine.rdf"/>
+        <uri id="Manually added entry" name="https://schema.edu.ee/omandatus" uri="omandatus.rdf"/>
         <uri id="Automatically generated entry, Timestamp=1597335808284" name="https://schema.edu.ee/teema/eis" uri="eis_teema.rdf"/>
     </group>
 </catalog>
