@@ -250,16 +250,17 @@
         <rdfs:comment xml:lang="en">A competence that is needed to work in this occupation.</rdfs:comment>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/supportsActivity">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/consistsOf">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
         <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
         <rdfs:domain rdf:resource="https://schema.edu.ee/Competence"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/Activity"/>
-        <rdfs:label xml:lang="en">supports activity</rdfs:label>
-        <rdfs:comment xml:lang="en">Links a competence to an activity (performance indicator) through which the content and expected performance of the competence are specified.</rdfs:comment>
-        <rdfs:comment xml:lang="et">Seob kompetentsi tegevusnäitajaga, mille kaudu kompetentsi sisu ja oodatav sooritus täpsustatakse.</rdfs:comment>
+        <rdfs:label xml:lang="en">consists of</rdfs:label>
+        <rdfs:label xml:lang="et">Koosneb tegevusnäitajatest</rdfs:label>
+        <rdfs:comment xml:lang="en">A competence consists of activities (performance indicators): the competence is demonstrated by carrying out the activities it consists of.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Pädevus koosneb tegevusnäitajatest: pädevuse demonstreerimine toimub läbi tegevusnäitajate rakendamise.</rdfs:comment>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="https://schema.edu.ee/includesKnobit">
