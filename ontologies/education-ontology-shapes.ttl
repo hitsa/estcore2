@@ -1,0 +1,57 @@
+# SHACL shapes for the education ontology (https://schema.edu.ee/).
+#
+# OWL can only forbid a learning outcome or knobit from being its own direct
+# prerequisite (hasPrerequisite, isPrerequisiteOf and dependsOnKnobit are
+# declared asymmetric and irreflexive). These shapes reject longer cycles too,
+# e.g. A -> B -> C -> A, because diagnostic testing based on knowledge space
+# theory needs the prerequisite graph to have no cycles.
+#
+# Validate data with, for example:  pyshacl -s education-ontology-shapes.ttl data.ttl
+
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix haridus: <https://schema.edu.ee/> .
+
+haridus:shapes
+    sh:declare [
+        sh:prefix "haridus" ;
+        sh:namespace "https://schema.edu.ee/"^^xsd:anyURI ;
+    ] .
+
+haridus:LearningOutcomePrerequisitesAcyclicShape
+    a sh:NodeShape ;
+    rdfs:label "Learning outcome prerequisites have no cycles"@en ,
+               "Õpiväljundite eeldusseosed ei moodusta tsüklit"@et ;
+    sh:targetSubjectsOf haridus:hasPrerequisite ;
+    sh:targetObjectsOf haridus:isPrerequisiteOf ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Learning outcome is its own direct or indirect prerequisite (hasPrerequisite / isPrerequisiteOf form a cycle)."@en ,
+                   "Õpiväljund on iseenda otsene või kaudne eeldus (eeldusseosed moodustavad tsükli)."@et ;
+        sh:prefixes haridus:shapes ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                $this (haridus:hasPrerequisite|^haridus:isPrerequisiteOf)+ $this .
+            }
+        """ ;
+    ] .
+
+haridus:KnobitDependenciesAcyclicShape
+    a sh:NodeShape ;
+    rdfs:label "Knobit dependencies have no cycles"@en ,
+               "Knobitite eeldusseosed ei moodusta tsüklit"@et ;
+    sh:targetSubjectsOf haridus:dependsOnKnobit ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Knobit is its own direct or indirect prerequisite (dependsOnKnobit forms a cycle)."@en ,
+                   "Knobit on iseenda otsene või kaudne eeldus (dependsOnKnobit moodustab tsükli)."@et ;
+        sh:prefixes haridus:shapes ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                $this haridus:dependsOnKnobit+ $this .
+            }
+        """ ;
+    ] .

@@ -69,7 +69,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/seotudOppeaine">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/relatedSubject">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -77,17 +77,17 @@
 		<rdfs:domain>
 			<owl:Class>    
 				<owl:unionOf rdf:parseType="Collection">
-					<owl:Class rdf:about="#Opivaljund"/>
-					<owl:Class rdf:about="#Oppematerjal"/>
+					<owl:Class rdf:about="https://schema.edu.ee/LearningOutcome"/>
+					<owl:Class rdf:about="https://schema.edu.ee/LearningMaterial"/>
 				</owl:unionOf>
 			</owl:Class>    
 		</rdfs:domain>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Subject"/>
         <rdfs:label xml:lang="et">Õppeaine, mille raames õpiväljundit või teemat käsitletekse</rdfs:label>
 		<rdfs:comment xml:lang="et">Õpiväljund ei pea olema seotud ühegi õppeainega ja võib olla seotud mitme õppeainega.</rdfs:comment>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/seotudTeema">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/relatedTopic">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -95,17 +95,17 @@
 		<rdfs:domain>
 			<owl:Class>    
 				<owl:unionOf rdf:parseType="Collection">
-					<owl:Class rdf:about="#Opivaljund"/>
-					<owl:Class rdf:about="#Oppematerjal"/>
+					<owl:Class rdf:about="https://schema.edu.ee/LearningOutcome"/>
+					<owl:Class rdf:about="https://schema.edu.ee/LearningMaterial"/>
 				</owl:unionOf>
 			</owl:Class>    
 		</rdfs:domain>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Teema"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Topic"/>
         <rdfs:label xml:lang="et">Teema, mille raames õpiväljundit või teemat käsitletakse</rdfs:label>
 		<rdfs:comment xml:lang="et">Õpiväljund ei pea olema ühegi teemaga, kuid teema raames käsitletakse vähemalt ühte õpiväljundit. Õppematerjal võib olla seotud teemadega.</rdfs:comment>
 	</owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/seotudAinevaldkond">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/relatedSubjectArea">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -113,17 +113,17 @@
 		<rdfs:domain>
 			<owl:Class>    
 				<owl:unionOf rdf:parseType="Collection">
-					<owl:Class rdf:about="#Opivaljund"/>
-					<owl:Class rdf:about="#Oppematerjal"/>
+					<owl:Class rdf:about="https://schema.edu.ee/LearningOutcome"/>
+					<owl:Class rdf:about="https://schema.edu.ee/LearningMaterial"/>
 				</owl:unionOf>
 			</owl:Class>    
 		</rdfs:domain>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Ainevaldkond"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/SubjectArea"/>
         <rdfs:label xml:lang="et">Ainevaldkond, mille raames õpiväljundit või õppematerjali käsitletakse</rdfs:label>
 		<rdfs:comment xml:lang="et">Õpiväljundit võidakse kasutada erinevates ainevaldkondades riikliku õppekava kontekstis. Õpiväljund ei pea olema seotud ainevaldkonnaga. Õppematerjal võib olla seotud ainevaldkondadega.</rdfs:comment>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/seotudOpivaljund">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/relatedLearningOutcome">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -131,17 +131,17 @@
 		<rdfs:domain>
 			<owl:Class>    
 				<owl:unionOf rdf:parseType="Collection">
-					<owl:Class rdf:about="#Opivaljund"/>
-					<owl:Class rdf:about="#Oppematerjal"/>
+					<owl:Class rdf:about="https://schema.edu.ee/LearningOutcome"/>
+					<owl:Class rdf:about="https://schema.edu.ee/LearningMaterial"/>
 				</owl:unionOf>
 			</owl:Class>    
 		</rdfs:domain>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/LearningOutcome"/>
         <rdfs:label xml:lang="et">Teemaga või õppematerjaliga seotud õpiväljund</rdfs:label>
 		<rdfs:comment xml:lang="et">Õpiväljundit võidakse kasutada erinevates ainevaldkondades riikliku õppekava kontekstis. Õpiväljund ei pea olema seotud ainevaldkonnaga. Õppematerjal on seotud konkreetsete õpiväljundite saavutamisega. Minimaalselt on õppematerjaliga seotud üks õpiväljund.</rdfs:comment>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/seotudHaridusaste">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/relatedEducationLevel">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -149,95 +149,303 @@
 		<rdfs:domain>
 			<owl:Class>    
 				<owl:unionOf rdf:parseType="Collection">
-					<owl:Class rdf:about="#Opivaljund"/>
-					<owl:Class rdf:about="#Oppematerjal"/>
+					<owl:Class rdf:about="https://schema.edu.ee/LearningOutcome"/>
+					<owl:Class rdf:about="https://schema.edu.ee/LearningMaterial"/>
 				</owl:unionOf>
 			</owl:Class>    
 		</rdfs:domain>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Haridusaste"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/EducationLevel"/>
 		<rdfs:subPropertyOf rdf:resource="https://schema.org/educationalAlignment"/>
         <rdfs:label xml:lang="et">Õppematerjali või õpiväljundiga seotud haridusaste</rdfs:label>
         <rdfs:comment xml:lang="et">Õppematerjal on mõeldud või õpiväljund on planeeritud konkreetsele haridusastmele.</rdfs:comment>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/onEelduseks">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/isPrerequisiteOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <owl:inverseOf rdf:resource="https://schema.edu.ee/opivaljundEeldab"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <owl:inverseOf rdf:resource="https://schema.edu.ee/hasPrerequisite"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/LearningOutcome"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/LearningOutcome"/>
         <rdfs:label xml:lang="et">Õpiväljund on eelduseks</rdfs:label>
         <rdfs:comment xml:lang="et">Õpiväljund on eelduseks teis(t)ele õpiväljundi(te)le.</rdfs:comment>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/eeldab">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/hasPrerequisite">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Opivaljund"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/LearningOutcome"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/LearningOutcome"/>
         <rdfs:comment xml:lang="et">Õpiväljundi omandamiseks on vajalik teine õpiväljund, nt oskuse jaoks on vajalik teadmine.</rdfs:comment>
         <rdfs:label xml:lang="et">Õpiväljundi eeldus</rdfs:label>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/ulesanneKoosneb">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/hasQuestion">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Ulesanne"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Kusimus"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Task"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Question"/>
         <rdfs:label xml:lang="et">Ülesanne koosneb üksikküsimustest</rdfs:label>
         <rdfs:comment xml:lang="et">Ülesanne koosneb vähemalt ühest üksikküsimusest.</rdfs:comment>
     </owl:ObjectProperty>    
 
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/ainevaldkondKoosneb">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/includesSubject">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Ainevaldkond"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Oppeaine"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/SubjectArea"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Subject"/>
         <rdfs:label xml:lang="et">Ainevaldkond sisaldab õppeainet</rdfs:label>
         <rdfs:label xml:lang="en">Includes subject</rdfs:label>
         <rdfs:comment xml:lang="et">Ainevaldkond sisaldab vähemalt ühte, kuid enamasti rohkemat, õppeainet.</rdfs:comment>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/alateema">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/hasSubtopic">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:domain rdf:resource="https://schema.edu.ee/Teema"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Teema"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Topic"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Topic"/>
         <rdfs:comment xml:lang="et">Teema alamosa, a&apos;la &quot;Tasandilised kujundid&quot;.</rdfs:comment>
         <rdfs:label xml:lang="et">Alateema</rdfs:label>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/hindabOpitulemust">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/assesses">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
         <rdfs:domain rdf:resource="https://schema.edu.ee/Test"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Opitulemus"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/LearningAssessment"/>
         <rdfs:comment xml:lang="et">Ülesanne hindab mil määral on õpitulemus omandatud. Küsimus hindab kas konkreetse küsimusega seotud õpitulemus on saavutatud või mitte.</rdfs:comment>
         <rdfs:label xml:lang="et">Hindab õpitulemuse saavutatust</rdfs:label>
     </owl:ObjectProperty>
         
-    <owl:ObjectProperty rdf:about="https://schema.edu.ee/testKoosneb">
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/hasTask">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
         <rdfs:domain rdf:resource="https://schema.edu.ee/Test"/>
-        <rdfs:range rdf:resource="https://schema.edu.ee/Ulesanne"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Task"/>
         <rdfs:label xml:lang="et">Test koosneb ülesannetest</rdfs:label>
         <rdfs:comment xml:lang="et">Test koosneb vähemalt ühest ülesandest.</rdfs:comment>
     </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/requiresCompetence">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Occupation"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Competence"/>
+        <rdfs:label xml:lang="en">requires competence</rdfs:label>
+        <rdfs:comment xml:lang="en">A competence that is needed to work in this occupation.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/consistsOf">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Competence"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Activity"/>
+        <rdfs:label xml:lang="en">consists of</rdfs:label>
+        <rdfs:label xml:lang="et">Koosneb tegevusnäitajatest</rdfs:label>
+        <rdfs:comment xml:lang="en">A competence consists of activities (performance indicators): the competence is demonstrated by carrying out the activities it consists of.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Pädevus koosneb tegevusnäitajatest: pädevuse demonstreerimine toimub läbi tegevusnäitajate rakendamise.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/includesKnobit">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/LearningOutcome"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Knobit"/>
+        <rdfs:label xml:lang="en">includes knobit</rdfs:label>
+        <rdfs:label xml:lang="et">Sisaldab knobitit</rdfs:label>
+        <rdfs:comment xml:lang="en">A knobit that is part of this learning outcome.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Seob õpiväljundi selle sisuks oleva väiksema teadmise, oskuse või hoiaku ühikuga.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/requiresKnobit">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Activity"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Knobit"/>
+        <rdfs:label xml:lang="en">requires knobit</rdfs:label>
+        <rdfs:label xml:lang="et">Nõuab knobitit</rdfs:label>
+        <rdfs:comment xml:lang="en">A knobit that is required in order to perform this activity.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Knobit, mida on vaja selle tegevuse sooritamiseks.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/dependsOnKnobit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Knobit"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Knobit"/>
+        <rdfs:label xml:lang="en">depends on knobit</rdfs:label>
+        <rdfs:label xml:lang="et">Eeldab knobitit</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a knobit to another knobit that must be mastered or applied before the first one can be. "A dependsOnKnobit B" means that B is a prerequisite of A. The relation is not transitive.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Seob knobiti teise knobitiga, mille omandamine või rakendamine on esimese knobiti omandamise või rakendamise eelduseks. Suund: A eeldab B-d tähendab, et B on A eeltingimus.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/includesLearningOutcome">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/LearningPath"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/LearningOutcome"/>
+        <rdfs:label xml:lang="en">includes learning outcome</rdfs:label>
+        <rdfs:label xml:lang="et">Sisaldab õpiväljundit</rdfs:label>
+        <rdfs:comment xml:lang="en">A learning outcome that is part of this learning path. The prerequisites between the included learning outcomes (hasPrerequisite) form the structure of the path.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Õpiraja koosseisu kuuluv õpiväljund. Õpiraja struktuuri moodustavad sellesse kuuluvate õpiväljundite vahelised eeldusseosed (hasPrerequisite).</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/assessesLearningOutcome">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:subPropertyOf rdf:resource="https://schema.edu.ee/relatedLearningOutcome"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Task"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/LearningOutcome"/>
+        <rdfs:label xml:lang="en">assesses learning outcome</rdfs:label>
+        <rdfs:label xml:lang="et">Hindab õpiväljundit</rdfs:label>
+        <rdfs:comment xml:lang="en">A learning outcome whose attainment this task is used to assess, e.g. as an item in a diagnostic test.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Õpiväljund, mille saavutatust ülesandega hinnatakse, nt diagnostilise testi ülesandena.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/answeredBy">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/author"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Answer"/>
+        <rdfs:range rdf:resource="https://schema.org/Person"/>
+        <rdfs:label xml:lang="en">answered by</rdfs:label>
+        <rdfs:label xml:lang="et">Vastaja</rdfs:label>
+        <rdfs:comment xml:lang="en">The person who gave this answer.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Isik, kes vastuse andis.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/answersItem">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Answer"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class rdf:about="https://schema.edu.ee/Task"/>
+                    <owl:Class rdf:about="https://schema.edu.ee/Question"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">answers item</rdfs:label>
+        <rdfs:label xml:lang="et">Vastab ülesandele</rdfs:label>
+        <rdfs:comment xml:lang="en">The task or question that this answer responds to.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Ülesanne või küsimus, millele vastus on antud.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="https://schema.edu.ee/isCorrect">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Answer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">is correct</rdfs:label>
+        <rdfs:label xml:lang="et">On õige</rdfs:label>
+        <rdfs:comment xml:lang="en">Whether the answer was judged correct.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Kas vastus loeti õigeks.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/aboutLearningOutcome">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/LearningAssessment"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/LearningOutcome"/>
+        <rdfs:label xml:lang="en">about learning outcome</rdfs:label>
+        <rdfs:label xml:lang="et">Hinnatav õpiväljund</rdfs:label>
+        <rdfs:comment xml:lang="en">The learning outcome whose attainment this assessment describes.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Õpiväljund, mille saavutatust õpitulemus kirjeldab.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/assessedPerson">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/LearningAssessment"/>
+        <rdfs:range rdf:resource="https://schema.org/Person"/>
+        <rdfs:label xml:lang="en">assessed person</rdfs:label>
+        <rdfs:label xml:lang="et">Hinnatav isik</rdfs:label>
+        <rdfs:comment xml:lang="en">The person whose learning this assessment describes.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Isik, kelle õppimist õpitulemus kirjeldab.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/basedOnAnswer">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/LearningAssessment"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Answer"/>
+        <rdfs:label xml:lang="en">based on answer</rdfs:label>
+        <rdfs:label xml:lang="et">Põhineb vastusel</rdfs:label>
+        <rdfs:comment xml:lang="en">An answer that this assessment is based on.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Vastus, millel õpitulemus põhineb.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/masteryStatus">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/LearningAssessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">mastery status</rdfs:label>
+        <rdfs:label xml:lang="et">Omandatuse olek</rdfs:label>
+        <rdfs:comment xml:lang="en">How far the learning outcome is mastered, as a concept from the mastery status list (https://schema.edu.ee/omandatus): mastered, ready, notYet or uncertain.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Õpiväljundi omandatuse olek omandatuse olekute loendist (https://schema.edu.ee/omandatus): omandatud, valmis õppima, veel mitte või ebaselge.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="https://schema.edu.ee/masteryProbability">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/LearningAssessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="en">mastery probability</rdfs:label>
+        <rdfs:label xml:lang="et">Omandatuse tõenäosus</rdfs:label>
+        <rdfs:comment xml:lang="en">The estimated probability, between 0 and 1, that the person has mastered the learning outcome.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Hinnanguline tõenäosus vahemikus 0 kuni 1, et isik on õpiväljundi omandanud.</rdfs:comment>
+    </owl:DatatypeProperty>
     
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -247,7 +455,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:Class rdf:about="https://schema.edu.ee/Kontrolltoo">
+    <owl:Class rdf:about="https://schema.edu.ee/ClassTest">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -257,7 +465,7 @@
         <rdfs:label xml:lang="et">Kontrolltöö</rdfs:label>
     </owl:Class>
         
-    <owl:Class rdf:about="https://schema.edu.ee/Tasemetoo">
+    <owl:Class rdf:about="https://schema.edu.ee/LevelTest">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -272,13 +480,13 @@
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppematerjal"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/LearningMaterial"/>
         <rdfs:comment xml:lang="et">Hindamisvahend kokkulepitud eesmärgi hindamiseks. Nt ülesannete kogum; standardiseeritud ülesannete või küsimuste kogum, millega uuritakse ja hinnatakse inimese võimeid ja omadusi või teadmisi ja oskusi.</rdfs:comment>
         <rdfs:label xml:lang="en">Test</rdfs:label>
         <rdfs:label xml:lang="et">Test</rdfs:label>
     </owl:Class>
     
-    <owl:Class rdf:about="https://schema.edu.ee/Tunnikontroll">
+    <owl:Class rdf:about="https://schema.edu.ee/LessonQuiz">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -288,7 +496,7 @@
         <rdfs:label xml:lang="et">Tunnikontroll</rdfs:label>
     </owl:Class>
             
-    <owl:Class rdf:about="https://schema.edu.ee/Opitulemus">
+    <owl:Class rdf:about="https://schema.edu.ee/LearningAssessment">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -298,7 +506,7 @@
         <rdfs:label xml:lang="et">Õpitulemus</rdfs:label>
     </owl:Class>
     
-    <owl:Class rdf:about="https://schema.edu.ee/Sihtgrupp">
+    <owl:Class rdf:about="https://schema.edu.ee/EducationalAudience">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -309,7 +517,7 @@
         <rdfs:label xml:lang="et">Sihtgrupp</rdfs:label>
     </owl:Class>
     
-    <owl:Class rdf:about="https://schema.edu.ee/Oppematerjal">
+    <owl:Class rdf:about="https://schema.edu.ee/LearningMaterial">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -320,27 +528,27 @@
         <rdfs:label xml:lang="et">Õppematerjal</rdfs:label>
     </owl:Class>
     
-    <owl:Class rdf:about="https://schema.edu.ee/Ulesanne">
+    <owl:Class rdf:about="https://schema.edu.ee/Task">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppematerjal"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/LearningMaterial"/>
         <rdfs:comment xml:lang="et">Kohustusena antud töö; harjutustöö koolis. Ülesanne koosneb tööjuhendist, (üksik)küsimustest ja vastustest. Kasutusel ka hindamisvahendina.</rdfs:comment>
         <rdfs:label xml:lang="et">Ülesanne</rdfs:label>
     </owl:Class>
 
-    <owl:Class rdf:about="https://schema.edu.ee/Ainekava">
+    <owl:Class rdf:about="https://schema.edu.ee/SubjectSyllabus">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppekava"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Curriculum"/>
         <rdfs:comment xml:lang="et">Dokument, mis hõlmab ühe aine õppe-eesmärgid, õppesisu, metoodika ja hindamise põhimõtted.</rdfs:comment>
         <rdfs:label xml:lang="et">Ainekava</rdfs:label>
     </owl:Class>
     
-	<owl:Class rdf:about="https://schema.edu.ee/Haridusaste">
+	<owl:Class rdf:about="https://schema.edu.ee/EducationLevel">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -350,7 +558,7 @@
         <rdfs:label xml:lang="et">Haridusaste</rdfs:label>
     </owl:Class>
 
-    <owl:Class rdf:about="https://schema.edu.ee/Ainevaldkond">
+    <owl:Class rdf:about="https://schema.edu.ee/SubjectArea">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -370,26 +578,26 @@ Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädev
         <rdfs:label xml:lang="en">Subject area</rdfs:label>
     </owl:Class>
     
-    <owl:Class rdf:about="https://schema.edu.ee/AinevaldkonnaPadevus">
+    <owl:Class rdf:about="https://schema.edu.ee/SubjectAreaCompetence">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Padevus"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Competence"/>
         <rdfs:label xml:lang="et">Ainevaldkonna pädevus</rdfs:label>
     </owl:Class>
 
-    <owl:Class rdf:about="https://schema.edu.ee/IndividuaalneOppekava">
+    <owl:Class rdf:about="https://schema.edu.ee/IndividualCurriculum">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Ainekava"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/SubjectSyllabus"/>
         <rdfs:comment xml:lang="et">Individuaalne õppekava on Individuaalse õppekava järgi õppimise korra kohaselt hariduslike erivajadustega õpilase jaoks koostatud õppekava, mis loob õpilasele tingimused võimetekohaseks õppimiseks ja arenemiseks. Individuaalne õppekava koostatakse õpilasele, kellel on raskusi oma klassikaaslastega samal ajal samas ruumis või vastavale klassile koostatud töökava alusel töötada. Hariduslikeks erivajadusteks võivad olla õpilase eriline andekus, õpi- ja käitumisraskused, terviserikked, puuded või pikemaaegne õpikeskkonnast eemal viibimine.</rdfs:comment>
         <rdfs:label xml:lang="et">Individuaalne õppekava</rdfs:label>
     </owl:Class>
 
-    <owl:Class rdf:about="https://schema.edu.ee/Koolitus">
+    <owl:Class rdf:about="https://schema.edu.ee/Training">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -399,17 +607,17 @@ Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädev
         <rdfs:label xml:lang="et">Koolitus</rdfs:label>
     </owl:Class>
     
-    <owl:Class rdf:about="https://schema.edu.ee/OpetajaTookava">
+    <owl:Class rdf:about="https://schema.edu.ee/TeacherWorkPlan">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppekava"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Curriculum"/>
         <rdfs:comment xml:lang="et">Töökava on õpetajale igapäevane abivahend, mis võimaldab tal õppeprotsessi kavandada ja analüüsida ning iseennast hinnata. Töökava on dokument, mille alusel toimub õppetöö tundides.</rdfs:comment>
         <rdfs:label xml:lang="et">Õpetaja töökava</rdfs:label>
     </owl:Class>
    
-    <owl:Class rdf:about="https://schema.edu.ee/Oppeaine">
+    <owl:Class rdf:about="https://schema.edu.ee/Subject">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -419,17 +627,17 @@ Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädev
         <rdfs:comment xml:lang="et">Õppeasutuses õpetatav teadus-, tehnika-, kunsti- vm ala.</rdfs:comment>
     </owl:Class>
     
-    <owl:Class rdf:about="https://schema.edu.ee/OppeasutuseOppekava">
+    <owl:Class rdf:about="https://schema.edu.ee/SchoolCurriculum">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppekava"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Curriculum"/>
         <rdfs:comment xml:lang="et">Õppeasutuse õppekava on õppe- ja kasvatustegevuse alusdokument, milles kirjeldatakse õppe rõhuasetused ja tegevused õppekava täitmiseks.</rdfs:comment>
         <rdfs:label xml:lang="et">Õppeasutuse õppekava</rdfs:label>
     </owl:Class>
     
-    <owl:Class rdf:about="https://schema.edu.ee/Oppekava">
+    <owl:Class rdf:about="https://schema.edu.ee/Curriculum">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -439,18 +647,18 @@ Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädev
         <rdfs:label xml:lang="et">Õppekava</rdfs:label>
     </owl:Class>
     
-    <owl:Class rdf:about="https://schema.edu.ee/RiiklikOppekava">
+    <owl:Class rdf:about="https://schema.edu.ee/NationalCurriculum">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Oppekava"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Curriculum"/>
         <rdfs:label xml:lang="en">National curriculum</rdfs:label>
         <rdfs:label xml:lang="et">Riiklik õppekava</rdfs:label>
 		<rdfs:comment xml:lang="et">Hariduse eesmärkide elluviimise riiklik plaan, mis annab ülevaate sellest, milleks, mida, kuidas ja millise aja jooksul õpitakse ning õpetatakse.</rdfs:comment>
     </owl:Class>
     
-    <owl:Class rdf:about="https://schema.edu.ee/Teema">
+    <owl:Class rdf:about="https://schema.edu.ee/Topic">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -461,22 +669,22 @@ Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädev
         <rdfs:label xml:lang="en">Topic</rdfs:label>
     </owl:Class>
     
-    <!-- https://schema.edu.ee/Hoiak -->
+    <!-- https://schema.edu.ee/Attitude -->
 
-    <owl:Class rdf:about="https://schema.edu.ee/Hoiak">
+    <owl:Class rdf:about="https://schema.edu.ee/Attitude">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/LearningOutcome"/>
         <rdfs:label xml:lang="en">Attitude</rdfs:label>
         <rdfs:label xml:lang="et">Hoiak</rdfs:label>
 		<rdfs:comment xml:lang="et">Inimese kalduvus hinnata objektide (näit. isikute, sündmuste, nähtuste) olemust teatud määral soosival või mittesoosival viisil. See hinnang väljendub tavaliselt tunnetusliku (kognitiivse), emotsionaalse (afektiivse) või käitumusliku (konatiivse) reageeringuna.</rdfs:comment>
     </owl:Class>
     
-    <!-- https://schema.edu.ee/Opivaljund -->
+    <!-- https://schema.edu.ee/LearningOutcome -->
 
-    <owl:Class rdf:about="https://schema.edu.ee/Opivaljund">
+    <owl:Class rdf:about="https://schema.edu.ee/LearningOutcome">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -487,51 +695,54 @@ Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädev
         <rdfs:label xml:lang="et">Õpiväljund</rdfs:label>
     </owl:Class>
 
-    <!-- https://schema.edu.ee/Oskus -->
+    <!-- https://schema.edu.ee/Skill -->
 
-    <owl:Class rdf:about="https://schema.edu.ee/Oskus">
+    <owl:Class rdf:about="https://schema.edu.ee/Skill">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/LearningOutcome"/>
         <rdfs:comment xml:lang="et">Võime rakendada teadmisi ja kasutada neid ülesannete täitmisel ja probleemide lahendamisel.</rdfs:comment>
         <rdfs:label xml:lang="et">Oskus</rdfs:label>
         <rdfs:label xml:lang="en">Skill</rdfs:label>
     </owl:Class>
 
-    <owl:Class rdf:about="https://schema.edu.ee/Padevus">
+    <owl:Class rdf:about="https://schema.edu.ee/Competence">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/LearningOutcome"/>
         <rdfs:comment xml:lang="et">Teadmiste, oskuste ja hoiakute kogum, mis tagab suutlikkuse teatud tegevusalal või -valdkonnas loovalt, ettevõtlikult ja paindlikult toimida.</rdfs:comment>
         <rdfs:label xml:lang="en">Competence</rdfs:label>
         <rdfs:label xml:lang="et">Pädevus</rdfs:label>
     </owl:Class>
 
-    <owl:Class rdf:about="https://schema.edu.ee/Teadmine">
+    <owl:Class rdf:about="https://schema.edu.ee/Knowledge">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
-        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/Opivaljund"/>
+        <rdfs:subClassOf rdf:resource="https://schema.edu.ee/LearningOutcome"/>
         <rdfs:comment xml:lang="et">Õpingutega või kogemustest omandatud faktide, reeglite, seaduspärasuste jms tundmine.</rdfs:comment>
         <rdfs:label xml:lang="en">Knowledge</rdfs:label>
         <rdfs:label xml:lang="et">Teadmine</rdfs:label>
     </owl:Class>
 	
-	<owl:Class rdf:about="https://schema.edu.ee/Opirada">
+	<owl:Class rdf:about="https://schema.edu.ee/LearningPath">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:subClassOf rdf:resource="https://schema.org/ItemList"/>
         <rdfs:comment xml:lang="et">Õppija poolt läbitud tee, mis sisaldab (e-)õppe tegevusi, mis võimaldavad teadmiste, oskuste ja pädevuste järjepidevat omandamist.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A path of learning outcomes, planned for or followed by a learner, through which knowledge, skills and competences are acquired step by step. Its learning outcomes are linked with includesLearningOutcome; where their order matters, it is given with schema:itemListElement, schema:ListItem and schema:position.</rdfs:comment>
         <rdfs:label xml:lang="et">Õpirada</rdfs:label>
+        <rdfs:label xml:lang="en">Learning path</rdfs:label>
     </owl:Class>
 
-	<owl:Class rdf:about="https://schema.edu.ee/Kusimus">
+	<owl:Class rdf:about="https://schema.edu.ee/Question">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
@@ -541,14 +752,50 @@ Ainevaldkonna õppeainete õpetamise peamine eesmärk on vastava valdkonnapädev
         <rdfs:label xml:lang="et">Küsimus</rdfs:label>
     </owl:Class>
 	
-	<owl:Class rdf:about="https://schema.edu.ee/Vastus">
+	<owl:Class rdf:about="https://schema.edu.ee/Answer">
         <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:issued>
 		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-14</dcterms:modified>
 		<rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
         <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
         <owl:equivalentClass rdf:resource="https://schema.org/Answer"/>
         <rdfs:comment xml:lang="et">Üksikküsimuse vastus testis.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A person's answer to a task or question, e.g. in a test. Linked to the person with answeredBy, to the task or question with answersItem, and judged with isCorrect.</rdfs:comment>
         <rdfs:label xml:lang="et">Vastus</rdfs:label>
+        <rdfs:label xml:lang="en">Answer</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/Occupation">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <owl:equivalentClass rdf:resource="https://schema.org/Occupation"/>
+        <rdfs:comment xml:lang="en">A job or profession: a set of tasks and duties that a person performs for a living.</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupation</rdfs:label>
+        <rdfs:label xml:lang="et">Amet</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/Activity">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:comment xml:lang="et">Iseseisva tähendusega, tulemusele suunatud ja mõõdetav soorituse kirjeldus, mis kirjeldab selgepiirilise ja tervikliku tegevuse või tööosa tegemist ning mille kaudu kompetents avaldub või on hinnatav.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A self-contained, outcome-oriented and measurable description of performance: carrying out a clearly bounded and complete activity or part of a work process, through which a competence shows or can be assessed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+        <rdfs:label xml:lang="et">Tegevusnäitaja</rdfs:label>
+        <skos:altLabel xml:lang="en">Performance indicator</skos:altLabel>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://schema.edu.ee/Knobit">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-26</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:comment xml:lang="et">Õppimist ja hindamist vääriv väikseim iseseisvat tähendust kandev teadmise, oskuse või hoiaku ühik, mida kasutatakse õpiväljundi või tegevusnäitaja sisulisteks osadeks lahutamiseks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Knobit</rdfs:label>
+        <rdfs:label xml:lang="et">Knobit</rdfs:label>
+        <skos:altLabel xml:lang="en">Atomic knowledge, skill or attitude unit</skos:altLabel>
     </owl:Class>
 
     <!-- 
