@@ -284,8 +284,22 @@
         <rdfs:domain rdf:resource="https://schema.edu.ee/Activity"/>
         <rdfs:range rdf:resource="https://schema.edu.ee/Knobit"/>
         <rdfs:label xml:lang="en">requires knobit</rdfs:label>
+        <rdfs:label xml:lang="et">Nõuab knobitit</rdfs:label>
+        <rdfs:comment xml:lang="en">A knobit that is required in order to perform this activity.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Knobit, mida on vaja selle tegevuse sooritamiseks.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://schema.edu.ee/dependsOnKnobit">
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://schema.edu.ee/"/>
+        <skos:inScheme rdf:resource="https://schema.edu.ee/"/>
+        <rdfs:domain rdf:resource="https://schema.edu.ee/Knobit"/>
+        <rdfs:range rdf:resource="https://schema.edu.ee/Knobit"/>
+        <rdfs:label xml:lang="en">depends on knobit</rdfs:label>
         <rdfs:label xml:lang="et">Eeldab knobitit</rdfs:label>
-        <rdfs:comment xml:lang="en">A knobit that is needed to perform this activity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a knobit to another knobit that must be mastered or applied before the first one can be. "A dependsOnKnobit B" means that B is a prerequisite of A. The relation is not transitive.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Seob knobiti teise knobitiga, mille omandamine või rakendamine on esimese knobiti omandamise või rakendamise eelduseks. Suund: A eeldab B-d tähendab, et B on A eeltingimus.</rdfs:comment>
     </owl:ObjectProperty>
     
     <!-- 
